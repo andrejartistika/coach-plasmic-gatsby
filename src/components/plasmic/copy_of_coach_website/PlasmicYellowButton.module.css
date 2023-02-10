@@ -1,0 +1,12 @@
+.getStartedButton {
+  position: relative;
+  color: #ffffff;
+  background: var(--token-oAoLkUf1TYhli3);
+  font-weight: 700;
+  text-align: left;
+  font-size: 19px;
+  border-radius: 25px;
+  padding: 5px 20px;
+  border-width: 1px;
+  border-style: none;
+}
