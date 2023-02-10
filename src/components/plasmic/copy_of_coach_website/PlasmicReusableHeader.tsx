@@ -33,7 +33,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { Header } from "components/Header/Header"; // plasmic-import: 8nW9b98Kd-GEVu/codeComponent
+import { Header } from 'components/Header/Header'; // plasmic-import: 8nW9b98Kd-GEVu/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
