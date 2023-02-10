@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import DownCaret from 'assets/icons/down-caret.svg';
 import DownCaretGray from 'assets/icons/down-caret-gray.svg';
 // import { useNavigate } from "react-router-dom";
+import { navigate } from 'gatsby';
 
 export default function MenuItem({ text, items, link, isDark }) {
   const [showItems, setShowItems] = useState(false);
@@ -32,7 +33,7 @@ export default function MenuItem({ text, items, link, isDark }) {
             setShowItems((prevState) => !prevState);
           } else if (link) {
             setShowItems(false);
-            // navigate(link);
+            navigate(link);
           }
         }}
       >
