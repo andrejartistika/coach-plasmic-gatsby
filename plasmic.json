@@ -1280,52 +1280,52 @@
         {
           "id": "3rNeoH1I_fqFT8",
           "name": "ShowcaseComponent",
-          "componentImportPath": "./components/Showcase/ShowcaseComponent"
+          "componentImportPath": "components/Showcase/ShowcaseComponent"
         },
         {
           "id": "8XXmua_XT0_ig3",
           "name": "WebShowcaseComponent",
-          "componentImportPath": "./components/Showcase/WebShowcaseComponent"
+          "componentImportPath": "components/Showcase/WebShowcaseComponent"
         },
         {
           "id": "WjHtn8WfzWpfmE",
           "name": "ShowcaseComponentMobile",
-          "componentImportPath": "./components/Showcase/ShowcaseComponentMobile"
+          "componentImportPath": "components/Showcase/ShowcaseComponentMobile"
         },
         {
           "id": "lSx_UPMDB8otCX",
           "name": "WebShowcaseComponentMobile",
-          "componentImportPath": "./components/Showcase/WebShowcaseComponentMobile"
+          "componentImportPath": "components/Showcase/WebShowcaseComponentMobile"
         },
         {
           "id": "8nW9b98Kd-GEVu",
           "name": "Header",
-          "componentImportPath": "./components/Header/Header"
+          "componentImportPath": "components/Header/Header"
         },
         {
           "id": "GvcxbeNjx8sOdy",
           "name": "ShowcaseComponent",
-          "componentImportPath": "./components/Showcase/ShowcaseComponent"
+          "componentImportPath": "components/Showcase/ShowcaseComponent"
         },
         {
           "id": "7ta_nlilMzXr6g",
           "name": "WebShowcaseComponent",
-          "componentImportPath": "./components/Showcase/WebShowcaseComponent"
+          "componentImportPath": "components/Showcase/WebShowcaseComponent"
         },
         {
           "id": "rWm0V-GKKDqfP_",
           "name": "ShowcaseComponentMobile",
-          "componentImportPath": "./components/Showcase/ShowcaseComponentMobile"
+          "componentImportPath": "components/Showcase/ShowcaseComponentMobile"
         },
         {
           "id": "9Fea1VkxwYisNB",
           "name": "WebShowcaseComponentMobile",
-          "componentImportPath": "./components/Showcase/WebShowcaseComponentMobile"
+          "componentImportPath": "components/Showcase/WebShowcaseComponentMobile"
         },
         {
           "id": "NhD8cpyPGumD30",
           "name": "Header",
-          "componentImportPath": "./components/Header/Header"
+          "componentImportPath": "components/Header/Header"
         }
       ]
     }
