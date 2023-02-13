@@ -24,6 +24,22 @@ const config: GatsbyConfig = {
         },
         extensions: []
       }
+    },
+    {
+      resolve: '@plasmicapp/loader-gatsby',
+      options: {
+        projects: [
+          {
+            id: 'n7JM2c9rKsJq2MtgHpQAyH', // ID of a project you are using
+            token: 'ai44IRJlp56DOru7FJZGX3FdVmGxmGbxkmS8IIVr0lndQjExTJxhdDT5Nj1M9cV3m18eFT5AJNjJi6ek25Q' // API token for that project
+          }
+        ],
+        // Fetches the latest revisions, whether or not they were unpublished!
+        // Disable for production to ensure you render only published changes.
+        preview: true,
+        // defaultPlasmicPage: require.resolve('./src/templates/defaultPlasmicPage.tsx'),
+
+      }
     }
   ]
 }

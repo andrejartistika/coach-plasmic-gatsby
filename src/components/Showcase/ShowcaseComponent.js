@@ -22,6 +22,7 @@ import PersonalizedVideo from 'assets/videos/personalized-experience.mp4';
 import TrackPerformanceVideo from 'assets/videos/track-performance.mp4';
 import ActionButton from 'components/elements/ActionButton';
 // import { useNavigate } from "react-router-dom";
+import { navigate } from 'gatsby';
 
 export function ShowcaseComponent({
   isLight,
@@ -119,7 +120,7 @@ export function ShowcaseComponent({
             <ActionButton
               title={buttonTitle ?? 'Empty Button'}
               isDark={!isLight}
-              // onClick={() => navigate(`/${onClickNavigateToString}`)}
+              onClick={() => navigate(`/${onClickNavigateToString}`)}
             />
           </div>
         )}

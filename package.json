@@ -17,6 +17,7 @@
   "dependencies": {
     "@plasmicapp/cli": "^0.1.211",
     "@plasmicapp/host": "^1.0.105",
+    "@plasmicapp/loader-gatsby": "^1.0.220",
     "@plasmicapp/react-web": "^0.2.156",
     "@plasmicpkgs/antd": "^2.0.20",
     "@plasmicpkgs/plasmic-nav": "^0.0.75",

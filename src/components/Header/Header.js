@@ -4,14 +4,13 @@ import MenuItem from './MenuItem';
 import Logo from 'assets/icons/coach-logo.svg';
 import LogoDarkMode from 'assets/icons/coach-logo-dark-mode.svg';
 import BurgerMenu from 'assets/icons/menu-burger.svg';
+import { navigate } from 'gatsby';
 
 import './Header.css';
 // import { useNavigate } from 'react-router-dom';
 import ResponsiveMenuItem from './ResponsiveMenuItem';
 
 export function Header({ isDark, data }) {
-  // const navigate = useNavigate();
-
   const [showMenu, setShowMenu] = useState(false);
 
   function toggleMenu() {
