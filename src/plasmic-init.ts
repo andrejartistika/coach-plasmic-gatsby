@@ -14,7 +14,7 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
     
   PLASMIC.registerComponent(ShowcaseComponent, {
     name: "ShowcaseComponent",
-    importPath: "./components/Showcase/ShowcaseComponent",
+    importPath: "components/Showcase/ShowcaseComponent",
     props: {
       isLight: "boolean",
       showButton: "boolean",
@@ -25,21 +25,21 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
   
   PLASMIC.registerComponent(WebShowcaseComponent, {
     name: "WebShowcaseComponent",
-    importPath: "./components/Showcase/WebShowcaseComponent",
+    importPath: "components/Showcase/WebShowcaseComponent",
     props: {
       isLight: "boolean",
     },
   });
   PLASMIC.registerComponent(ShowcaseComponentMobile, {
     name: "ShowcaseComponentMobile",
-    importPath: "./components/Showcase/ShowcaseComponentMobile",
+    importPath: "components/Showcase/ShowcaseComponentMobile",
     props: {
       isLight: "boolean",
     },
   });
   PLASMIC.registerComponent(WebShowcaseComponentMobile, {
     name: "WebShowcaseComponentMobile",
-    importPath: "./components/Showcase/WebShowcaseComponentMobile",
+    importPath: "components/Showcase/WebShowcaseComponentMobile",
     props: {
       isLight: "boolean",
     },
@@ -47,7 +47,7 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
   
   PLASMIC.registerComponent(Header, {
     name: "Header",
-    importPath: "./components/Header/Header",
+    importPath: "components/Header/Header",
     props: {
       isDark: "boolean",
       data: "object",

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import DownCaret from 'assets/icons/down-caret.svg';
 
+import { navigate } from 'gatsby';
+
 import './Header.css';
 // import { useNavigate } from "react-router-dom";
 
@@ -43,7 +45,7 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
                     onClick={() => {
                       setShowMenu(false);
                       document.body.style.overflow = 'scroll';
-                      // navigate(el.link);
+                      navigate(el.link);
                     }}
                     className="header--responsive-menu-subitem"
                   >
