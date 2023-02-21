@@ -1105,7 +1105,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
                             ) : null
                           }
-                          link={"https://calendly.com/kalina-t/30min" as const}
+                          link={`/features`}
                           showEndIcon={true}
                         >
                           {true ? (
