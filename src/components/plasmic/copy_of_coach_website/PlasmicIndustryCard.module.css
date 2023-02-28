@@ -8,9 +8,9 @@
   align-items: center;
 }
 .freeBox__hHrcY {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 200px;
   height: 210px;
   max-width: 100%;
@@ -27,8 +27,8 @@
 }
 .freeBox__hHrcY > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   margin-top: calc(0px - 30px);
   height: calc(100% + 30px);
 }

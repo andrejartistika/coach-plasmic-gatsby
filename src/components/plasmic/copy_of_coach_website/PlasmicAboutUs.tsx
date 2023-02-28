@@ -12,7 +12,11 @@
 // Component: mLK_azlaN8t68r
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -66,7 +70,7 @@ export type PlasmicAboutUs__OverridesType = {
   copy?: p.Flex<"div">;
   ctaBlog2?: p.Flex<"div">;
   section11?: p.Flex<"div">;
-  cta?: p.Flex<"div">;
+  cta3?: p.Flex<"div">;
   link?: p.Flex<"a"> & Partial<LinkProps>;
   footer?: p.Flex<typeof Footer>;
 };
@@ -252,7 +256,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                   className={classNames(sty.img__zj79W)}
                   displayHeight={"auto" as const}
                   displayMaxHeight={"none" as const}
-                  displayMaxWidth={"65%" as const}
+                  displayMaxWidth={"60%" as const}
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
                   displayWidth={"auto" as const}
@@ -547,83 +551,95 @@ function PlasmicAboutUs__RenderFunc(props: {
             ) : null}
           </div>
 
-          <div className={classNames(projectcss.all, sty.freeBox__gUqb4)} />
-
           <p.Stack
             as={"div"}
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
+            data-plasmic-name={"cta3"}
+            data-plasmic-override={overrides.cta3}
             hasGap={true}
-            className={classNames(projectcss.all, sty.cta)}
+            className={classNames(projectcss.all, sty.cta3)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__gtq0
-              )}
-            >
-              {"READY TO START?"}
-            </div>
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__jRoe8
-              )}
-            >
-              {
-                "Experience the full power of Coach in action, and see why microlearning is your company’s future."
-              }
-            </div>
-
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___6Vq11)}
-            >
+            {true ? (
               <p.Stack
-                as={p.PlasmicLink}
-                data-plasmic-name={"link"}
-                data-plasmic-override={overrides.link}
+                as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, projectcss.a, sty.link)}
-                component={Link}
-                href={"https://calendly.com/kalina-t/30min" as const}
-                platform={"gatsby"}
-                target={"_blank" as const}
+                className={classNames(projectcss.all, sty.freeBox__hx1Kd)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__sEKd
+                    sty.text__vHej9
                   )}
                 >
-                  {"GET STARTED"}
+                  {"READY TO START?"}
                 </div>
 
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___7Dyc)}
-                  displayHeight={"auto" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"15px" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: buttonCaretWhitesvg2EkMgwDrEmqPnVl,
-                    fullWidth: 108,
-                    fullHeight: 150,
-                    aspectRatio: 0.722222
-                  }}
-                />
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___0FeU
+                  )}
+                >
+                  {
+                    "Experience the full power of Coach in action, and see why microlearning is your company’s future."
+                  }
+                </div>
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__jFd8C)}
+                >
+                  <p.Stack
+                    as={p.PlasmicLink}
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
+                    hasGap={true}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link
+                    )}
+                    component={Link}
+                    href={"https://calendly.com/kalina-t/30min" as const}
+                    platform={"gatsby"}
+                    target={"_blank" as const}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__x8Huo
+                      )}
+                    >
+                      {"GET STARTED"}
+                    </div>
+
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__eqtfg)}
+                      displayHeight={"auto" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"15px" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: buttonCaretWhitesvg2EkMgwDrEmqPnVl,
+                        fullWidth: 108,
+                        fullHeight: 150,
+                        aspectRatio: 0.722222
+                      }}
+                    />
+                  </p.Stack>
+                </p.Stack>
               </p.Stack>
-            </p.Stack>
+            ) : null}
           </p.Stack>
+
+          <div className={classNames(projectcss.all, sty.freeBox__gUqb4)} />
 
           <Footer
             data-plasmic-name={"footer"}
@@ -644,7 +660,7 @@ const PlasmicDescendants = {
     "copy",
     "ctaBlog2",
     "section11",
-    "cta",
+    "cta3",
     "link",
     "footer"
   ],
@@ -653,7 +669,7 @@ const PlasmicDescendants = {
   copy: ["copy"],
   ctaBlog2: ["ctaBlog2", "section11"],
   section11: ["section11"],
-  cta: ["cta", "link"],
+  cta3: ["cta3", "link"],
   link: ["link"],
   footer: ["footer"]
 } as const;
@@ -667,7 +683,7 @@ type NodeDefaultElementType = {
   copy: "div";
   ctaBlog2: "div";
   section11: "div";
-  cta: "div";
+  cta3: "div";
   link: "a";
   footer: typeof Footer;
 };
@@ -738,7 +754,7 @@ export const PlasmicAboutUs = Object.assign(
     copy: makeNodeComponent("copy"),
     ctaBlog2: makeNodeComponent("ctaBlog2"),
     section11: makeNodeComponent("section11"),
-    cta: makeNodeComponent("cta"),
+    cta3: makeNodeComponent("cta3"),
     link: makeNodeComponent("link"),
     footer: makeNodeComponent("footer"),
 

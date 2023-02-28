@@ -12,7 +12,11 @@
 // Component: todkiqyH0YNqx
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -351,14 +355,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(sty.img__hLkRg)}
                     displayHeight={"auto" as const}
                     displayMaxHeight={"none" as const}
-                    displayMaxWidth={"none" as const}
+                    displayMaxWidth={"1600px" as const}
                     displayMinHeight={"340px" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("100%" as const)
                         : hasVariant(globalVariants, "screen", "tablet")
-                        ? ("100%" as const)
+                        ? ("85%" as const)
                         : ("100%" as const)
                     }
                     src={{
@@ -675,139 +679,152 @@ function PlasmicHomepage__RenderFunc(props: {
             ) : null}
           </div>
 
-          <div
-            data-plasmic-name={"section2"}
-            data-plasmic-override={overrides.section2}
-            className={classNames(projectcss.all, sty.section2)}
-          >
-            <div className={classNames(projectcss.all, sty.column__pLxu6)}>
-              <div className={classNames(projectcss.all, sty.freeBox__boGe)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___8R2MY)}
-                  displayHeight={"37px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: group926SvgK77K9Hi618J0Ck,
-                    fullWidth: 300,
-                    fullHeight: 76,
-                    aspectRatio: 3.959184
-                  }}
-                />
-
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2___8MiaH
-                  )}
-                >
-                  {"Prepare training content faster"}
-                </h2>
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__w6PRv
-                  )}
-                >
-                  {
-                    "Import content you already have, easily create new modules or let our team take care of it. Cover company-specific knowledge like: product training, procedures & safety, sales training, onboarding and much more."
-                  }
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__t0E7A)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__ucWsg)}
-                    role={"img"}
-                  />
-
+          {true ? (
+            <div className={classNames(projectcss.all, sty.freeBox__dlj09)}>
+              <div
+                data-plasmic-name={"section2"}
+                data-plasmic-override={overrides.section2}
+                className={classNames(projectcss.all, sty.section2)}
+              >
+                <div className={classNames(projectcss.all, sty.column__pLxu6)}>
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___4RxyK
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__boGe)}
                   >
-                    {"8 QUESTION TYPES + LESSONS IN ANY FORMAT"}
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___8R2MY)}
+                      displayHeight={"37px" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: group926SvgK77K9Hi618J0Ck,
+                        fullWidth: 300,
+                        fullHeight: 76,
+                        aspectRatio: 3.959184
+                      }}
+                    />
+
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2___8MiaH
+                      )}
+                    >
+                      {"Prepare training content faster"}
+                    </h2>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__w6PRv
+                      )}
+                    >
+                      {
+                        "Import content you already have, easily create new modules or let our team take care of it. Cover company-specific knowledge like: product training, procedures & safety, sales training, onboarding and much more."
+                      }
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__t0E7A)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__ucWsg)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___4RxyK
+                        )}
+                      >
+                        {"8 QUESTION TYPES + LESSONS IN ANY FORMAT"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xYw1T)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__yj9Yi)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__evKn
+                        )}
+                      >
+                        {"UNLIMITED TRAINING MODULES"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___92Cgp
+                      )}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg___2MJut)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__q2IWf
+                        )}
+                      >
+                        {"AUTOGENERATE QUESTIONS "}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className={classNames(projectcss.all, sty.freeBox__xYw1T)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__yj9Yi)}
-                    role={"img"}
+                <div className={classNames(projectcss.all, sty.column___9EymB)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__o9NaW)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("367px" as const)
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? ("auto" as const)
+                        : ("100%" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? ("100%" as const)
+                        : ("85%" as const)
+                    }
+                    loading={"lazy" as const}
+                    src={{
+                      src: _1AddContentpng2SfY5POiCtJy1Lz,
+                      fullWidth: 1041,
+                      fullHeight: 1100,
+                      aspectRatio: undefined
+                    }}
                   />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__evKn
-                    )}
-                  >
-                    {"UNLIMITED TRAINING MODULES"}
-                  </div>
-                </div>
-
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___92Cgp)}
-                >
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg___2MJut)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__q2IWf
-                    )}
-                  >
-                    {"AUTOGENERATE QUESTIONS "}
-                  </div>
                 </div>
               </div>
             </div>
-
-            <div className={classNames(projectcss.all, sty.column___9EymB)}>
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__o9NaW)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("367px" as const)
-                    : hasVariant(globalVariants, "screen", "tablet")
-                    ? ("auto" as const)
-                    : ("100%" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "tablet")
-                    ? ("100%" as const)
-                    : ("85%" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: _1AddContentpng2SfY5POiCtJy1Lz,
-                  fullWidth: 1041,
-                  fullHeight: 1100,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-          </div>
+          ) : null}
 
           <div className={classNames(projectcss.all, sty.freeBox__xEpg)}>
             <p.PlasmicImg
@@ -829,139 +846,152 @@ function PlasmicHomepage__RenderFunc(props: {
             />
           </div>
 
-          <div
-            data-plasmic-name={"section3"}
-            data-plasmic-override={overrides.section3}
-            className={classNames(projectcss.all, sty.section3)}
-          >
-            <div className={classNames(projectcss.all, sty.column__t5Wnc)}>
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__sZol8)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("372px" as const)
-                    : hasVariant(globalVariants, "screen", "tablet")
-                    ? ("auto" as const)
-                    : ("100%" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "tablet")
-                    ? ("100%" as const)
-                    : ("85%" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: _2DeployAndPlaypng2W6PiB1EyHkMfx1,
-                  fullWidth: 1041,
-                  fullHeight: 1100,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-
-            <div className={classNames(projectcss.all, sty.column__mvNoz)}>
-              <div className={classNames(projectcss.all, sty.freeBox__h3KW4)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__oiQAi)}
-                  displayHeight={"37px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: group925SvgDq4BIaLnGvulx2,
-                    fullWidth: 300,
-                    fullHeight: 74,
-                    aspectRatio: 4.081633
-                  }}
-                />
-
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2___2Oh7J
-                  )}
-                >
-                  {"Deploy training when it's most needed"}
-                </h2>
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ygYd
-                  )}
-                >
-                  {
-                    "In the app, employees test and refresh their knowledge through a set of learning games. Coach figures out their knowledge gaps, adapts the learning path and assigns learning materials to help them improve."
-                  }
+          {true ? (
+            <div className={classNames(projectcss.all, sty.freeBox__foNy4)}>
+              <div
+                data-plasmic-name={"section3"}
+                data-plasmic-override={overrides.section3}
+                className={classNames(projectcss.all, sty.section3)}
+              >
+                <div className={classNames(projectcss.all, sty.column__t5Wnc)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__sZol8)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("372px" as const)
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? ("auto" as const)
+                        : ("100%" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? ("100%" as const)
+                        : ("85%" as const)
+                    }
+                    loading={"lazy" as const}
+                    src={{
+                      src: _2DeployAndPlaypng2W6PiB1EyHkMfx1,
+                      fullWidth: 1041,
+                      fullHeight: 1100,
+                      aspectRatio: undefined
+                    }}
+                  />
                 </div>
 
-                <div className={classNames(projectcss.all, sty.freeBox__vzfvx)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__kfikr)}
-                    role={"img"}
-                  />
-
+                <div className={classNames(projectcss.all, sty.column__mvNoz)}>
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__yMlVl
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__h3KW4)}
                   >
-                    {"ENGAGING LEARNING EXPERIENCE"}
-                  </div>
-                </div>
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__oiQAi)}
+                      displayHeight={"37px" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: group925SvgDq4BIaLnGvulx2,
+                        fullWidth: 300,
+                        fullHeight: 74,
+                        aspectRatio: 4.081633
+                      }}
+                    />
 
-                <div className={classNames(projectcss.all, sty.freeBox__zU4Ll)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg___09CxU)}
-                    role={"img"}
-                  />
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2___2Oh7J
+                      )}
+                    >
+                      {"Deploy training when it's most needed"}
+                    </h2>
 
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___04Hd7
-                    )}
-                  >
-                    {"AVAILABLE ON ALL PLATFORMS AND LANGUAGES"}
-                  </div>
-                </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ygYd
+                      )}
+                    >
+                      {
+                        "In the app, employees test and refresh their knowledge through a set of learning games. Coach figures out their knowledge gaps, adapts the learning path and assigns learning materials to help them improve."
+                      }
+                    </div>
 
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___3ImS6)}
-                >
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__vwllp)}
-                    role={"img"}
-                  />
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__vzfvx)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__kfikr)}
+                        role={"img"}
+                      />
 
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___8V787
-                    )}
-                  >
-                    {"SCIENCE-BACKED LEARNING METHODOLOGY"}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yMlVl
+                        )}
+                      >
+                        {"ENGAGING LEARNING EXPERIENCE"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__zU4Ll)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg___09CxU)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___04Hd7
+                        )}
+                      >
+                        {"AVAILABLE ON ALL PLATFORMS AND LANGUAGES"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___3ImS6
+                      )}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__vwllp)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___8V787
+                        )}
+                      >
+                        {"SCIENCE-BACKED LEARNING METHODOLOGY"}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ) : null}
 
           <div className={classNames(projectcss.all, sty.freeBox__cCFml)}>
             <p.PlasmicImg
@@ -983,212 +1013,231 @@ function PlasmicHomepage__RenderFunc(props: {
             />
           </div>
 
-          <div
-            data-plasmic-name={"section4"}
-            data-plasmic-override={overrides.section4}
-            className={classNames(projectcss.all, sty.section4)}
-          >
-            <div className={classNames(projectcss.all, sty.column__fFHbq)}>
-              <div className={classNames(projectcss.all, sty.freeBox__vr5E1)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___43YUj)}
-                  displayHeight={"37px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: group924SvgPiZmzioOuCOf6W,
-                    fullWidth: 300,
-                    fullHeight: 66,
-                    aspectRatio: 4.530612
-                  }}
-                />
+          {true ? (
+            <div className={classNames(projectcss.all, sty.freeBox__wBOba)}>
+              <div
+                data-plasmic-name={"section4"}
+                data-plasmic-override={overrides.section4}
+                className={classNames(projectcss.all, sty.section4)}
+              >
+                <div className={classNames(projectcss.all, sty.column__fFHbq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__vr5E1)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___43YUj)}
+                      displayHeight={"37px" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: group924SvgPiZmzioOuCOf6W,
+                        fullWidth: 300,
+                        fullHeight: 66,
+                        aspectRatio: 4.530612
+                      }}
+                    />
 
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__okHu0
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Track learning performance in real time"
-                    : "Track learning performance in real time"}
-                </h2>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__okHu0
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "Track learning performance in real time"
+                        : "Track learning performance in real time"}
+                    </h2>
 
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__hn9Kt
-                  )}
-                >
-                  {
-                    "Get in-depth analytics about knowledge levels across the organization. Coach lets you track hundreds of important KPI’s that will help you make better decisions and improve performance."
-                  }
-                </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hn9Kt
+                      )}
+                    >
+                      {
+                        "Get in-depth analytics about knowledge levels across the organization. Coach lets you track hundreds of important KPI’s that will help you make better decisions and improve performance."
+                      }
+                    </div>
 
-                <div className={classNames(projectcss.all, sty.freeBox__hlIoG)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__k8CgH)}
-                    role={"img"}
-                  />
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__hlIoG)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__k8CgH)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__tV0AQ
+                        )}
+                      >
+                        {"MULTI-LEVEL INSIGHTS"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__gcqZt)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__oHoaM)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__bpQwB
+                        )}
+                      >
+                        {"GENERATE & SHARE REPORTS"}
+                      </div>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__z6Zkc)}
+                    >
+                      <CorrectsvgIcon
+                        className={classNames(projectcss.all, sty.svg__rb0Fs)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__l5Bt
+                        )}
+                      >
+                        {"DETECT PROBLEMS AND KNOWLEDGE GAPS"}
+                      </div>
+                    </div>
+                  </div>
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__tV0AQ
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__troAw)}
                   >
-                    {"MULTI-LEVEL INSIGHTS"}
-                  </div>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__gcqZt)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__oHoaM)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bpQwB
-                    )}
-                  >
-                    {"GENERATE & SHARE REPORTS"}
-                  </div>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__z6Zkc)}>
-                  <CorrectsvgIcon
-                    className={classNames(projectcss.all, sty.svg__rb0Fs)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__l5Bt
-                    )}
-                  >
-                    {"DETECT PROBLEMS AND KNOWLEDGE GAPS"}
-                  </div>
-                </div>
-              </div>
-
-              <div className={classNames(projectcss.all, sty.freeBox__troAw)}>
-                {true
-                  ? p.renderPlasmicSlot({
-                      defaultContents: true ? (
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__xDxyK
-                          )}
-                          endIcon={
-                            true ? (
-                              <DownArrowIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__tajad
-                                )}
-                                role={"img"}
-                              />
-                            ) : null
-                          }
-                          link={`/features`}
-                          showEndIcon={true}
-                        >
-                          {true ? (
-                            <div
+                    {true
+                      ? p.renderPlasmicSlot({
+                          defaultContents: true ? (
+                            <Button
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__bSaGx
+                                "__wab_instance",
+                                sty.button__xDxyK
                               )}
+                              endIcon={
+                                true ? (
+                                  <DownArrowIcon
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.svg__tajad
+                                    )}
+                                    role={"img"}
+                                  />
+                                ) : null
+                              }
+                              link={`/features`}
+                              showEndIcon={true}
                             >
-                              {"Explore all features"}
-                            </div>
-                          ) : null}
-                        </Button>
-                      ) : null,
-                      value: args.whiteblueButton,
-                      className: classNames(sty.slotTargetWhiteblueButton)
-                    })
-                  : null}
+                              {true ? (
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__bSaGx
+                                  )}
+                                >
+                                  {"Explore all features"}
+                                </div>
+                              ) : null}
+                            </Button>
+                          ) : null,
+                          value: args.whiteblueButton,
+                          className: classNames(sty.slotTargetWhiteblueButton)
+                        })
+                      : null}
+                  </div>
+                </div>
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column___5HkkZ)}
+                >
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___1Sbv6)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("372px" as const)
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? ("auto" as const)
+                        : ("100%" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? ("100%" as const)
+                        : ("85%" as const)
+                    }
+                    loading={"lazy" as const}
+                    src={{
+                      src: _3TrackAndImprovepng2Ua7IspOhVqdD8N,
+                      fullWidth: 1041,
+                      fullHeight: 1100,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Button
+                      data-plasmic-name={"whiteblueButton2"}
+                      data-plasmic-override={overrides.whiteblueButton2}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.whiteblueButton2
+                      )}
+                      endIcon={
+                        <DownArrowIcon
+                          className={classNames(projectcss.all, sty.svg__uqCNe)}
+                          role={"img"}
+                        />
+                      }
+                      showEndIcon={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___5Oilv
+                        )}
+                      >
+                        {"Explore all features"}
+                      </div>
+                    </Button>
+                  ) : null}
+                </p.Stack>
               </div>
             </div>
-
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column___5HkkZ)}
-            >
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img___1Sbv6)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("372px" as const)
-                    : hasVariant(globalVariants, "screen", "tablet")
-                    ? ("auto" as const)
-                    : ("100%" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "tablet")
-                    ? ("100%" as const)
-                    : ("85%" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: _3TrackAndImprovepng2Ua7IspOhVqdD8N,
-                  fullWidth: 1041,
-                  fullHeight: 1100,
-                  aspectRatio: undefined
-                }}
-              />
-
-              {(
-                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-              ) ? (
-                <Button
-                  data-plasmic-name={"whiteblueButton2"}
-                  data-plasmic-override={overrides.whiteblueButton2}
-                  className={classNames("__wab_instance", sty.whiteblueButton2)}
-                  endIcon={
-                    <DownArrowIcon
-                      className={classNames(projectcss.all, sty.svg__uqCNe)}
-                      role={"img"}
-                    />
-                  }
-                  showEndIcon={true}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___5Oilv
-                    )}
-                  >
-                    {"Explore all features"}
-                  </div>
-                </Button>
-              ) : null}
-            </p.Stack>
-          </div>
+          ) : null}
 
           <div
             data-plasmic-name={"section5"}
@@ -2181,7 +2230,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0" as const}
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("200px" as const)
+                        ? ("auto" as const)
                         : hasVariant(globalVariants, "screen", "tablet")
                         ? ("240px" as const)
                         : ("310px" as const)

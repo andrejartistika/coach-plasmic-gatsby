@@ -12,7 +12,11 @@
 // Component: J63B-YSPb58LD2
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -213,7 +217,7 @@ function PlasmicWhoIsItForInstructionalDesigners__RenderFunc(props: {
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "The training tool \nthat helps you learn"
-                        : "Build training that employees  love"}
+                        : "Build trainings that employees  love"}
                     </h1>
                   </p.Stack>
 
@@ -562,13 +566,13 @@ function PlasmicWhoIsItForInstructionalDesigners__RenderFunc(props: {
                 </p.Stack>
               </p.Stack>
             </p.Stack>
-          </div>
 
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
-            <div className={classNames(projectcss.all, sty.freeBox__oD96I)} />
-          ) : null}
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <div className={classNames(projectcss.all, sty.freeBox__oD96I)} />
+            ) : null}
+          </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__uVdWz)}>
             <div className={classNames(projectcss.all, sty.freeBox___3FFjK)}>

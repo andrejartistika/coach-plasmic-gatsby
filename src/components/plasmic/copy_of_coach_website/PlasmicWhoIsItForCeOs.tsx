@@ -12,7 +12,11 @@
 // Component: FBQErx2QSmikX_
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -223,7 +227,9 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
                   >
                     {hasVariant(globalVariants, "screen", "mobileOnly")
                       ? "Give your employees the knowledge they need to excel at their jobs."
-                      : "Give your employees the knowledge they need\nto excel at their jobs."}
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? "Give your employees the knowledge they need to excel at their jobs."
+                      : "Give your employees the knowledge they need to excel at their jobs."}
                   </div>
 
                   <p.Stack
@@ -323,7 +329,9 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
             data-plasmic-override={overrides.section2}
             className={classNames(projectcss.all, sty.section2)}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__deVvq)} />
+            {(hasVariant(globalVariants, "screen", "tablet") ? true : true) ? (
+              <div className={classNames(projectcss.all, sty.freeBox__deVvq)} />
+            ) : null}
 
             <div className={classNames(projectcss.all, sty.columns__trJp3)}>
               <div className={classNames(projectcss.all, sty.column__tLof6)}>
@@ -566,13 +574,13 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
                 </p.Stack>
               </p.Stack>
             </p.Stack>
-          </div>
 
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
-            <div className={classNames(projectcss.all, sty.freeBox__gP1I)} />
-          ) : null}
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <div className={classNames(projectcss.all, sty.freeBox__gP1I)} />
+            ) : null}
+          </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__iDgbd)}>
             <div className={classNames(projectcss.all, sty.freeBox__vr5Og)}>

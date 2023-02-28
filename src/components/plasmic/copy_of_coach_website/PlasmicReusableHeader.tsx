@@ -12,7 +12,11 @@
 // Component: aZG1o9ts_1BbAO
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -94,20 +98,16 @@ function PlasmicReusableHeader__RenderFunc(props: {
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames("__wab_instance", sty.root)}
+      className={classNames(
+        "__wab_instance",
+        projectcss.root_reset,
+        projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
+        sty.root
+      )}
       data={[
-        {
-          itemTitle: "Product",
-          subMenuItems: [
-            {
-              itemTitle: "Coach Platform",
-              items: [
-                { title: "Mobile app - for employees", link: "/features" },
-                { title: "Admin panel - for managers", link: "/features" }
-              ]
-            }
-          ]
-        },
+        { itemTitle: "Product", link: "/features" },
         {
           itemTitle: "How Coach helps",
           subMenuItems: [

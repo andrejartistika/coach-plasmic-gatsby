@@ -12,7 +12,11 @@
 // Component: ZpICpcQ-Op8g4W
 import * as React from "react";
 
-import { Link, GatsbyLinkProps as LinkProps } from "gatsby";
+import {
+  Link,
+  GatsbyLinkProps as LinkProps,
+  navigate as __gatsbyNavigate
+} from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -388,7 +392,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
             closeButton={
               <p.PlasmicImg
                 alt={""}
-                className={classNames(sty.img__m71W)}
+                className={classNames(sty.img__jFnI4)}
                 displayHeight={"auto" as const}
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"none" as const}
@@ -406,7 +410,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__q4LAk
+                    sty.link__plcGb
                   )}
                   component={Link}
                   href={"/" as const}
@@ -420,7 +424,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__rInv5
+                    sty.link___1BLm4
                   )}
                   component={Link}
                   href={"/" as const}
@@ -434,7 +438,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__zyHv7
+                    sty.link__maSbi
                   )}
                   component={Link}
                   href={"/" as const}
@@ -520,7 +524,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
             closeButton={
               <p.PlasmicImg
                 alt={""}
-                className={classNames(sty.img__ltZ8R)}
+                className={classNames(sty.img___0XtfZ)}
                 displayHeight={"auto" as const}
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"none" as const}
@@ -597,7 +601,7 @@ function PlasmicMenuHeaderDesktop__RenderFunc(props: {
             openButton={
               <p.PlasmicImg
                 alt={""}
-                className={classNames(sty.img__de6Jp)}
+                className={classNames(sty.img__is9FT)}
                 displayHeight={"auto" as const}
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"none" as const}

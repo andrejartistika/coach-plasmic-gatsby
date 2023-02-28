@@ -20,18 +20,19 @@
   }
 }
 .columns {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
   height: auto;
   flex-shrink: 1;
+  max-width: 1140px;
   min-width: 0;
 }
 .columns > :global(.__wab_flex-container) {
   flex-direction: row;
-  flex-wrap: nowrap;
   align-items: stretch;
+  flex-wrap: nowrap;
   min-width: 0;
   margin-left: calc(0px - 50px);
   width: calc(100% + 50px);
@@ -67,11 +68,25 @@
   .columns > :global(.__wab_flex-container) {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: calc(0px - 50px);
+    height: calc(100% + 50px);
   }
 }
 @media (max-width: 1024px) {
   .columns > :global(.__wab_flex-container) > :nth-child(1n + 1) {
     width: calc((100% - 1 * 50px) * 12 / 12);
+  }
+}
+@media (max-width: 1024px) {
+  .columns > :global(.__wab_flex-container) > *,
+  .columns > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .columns > :global(.__wab_flex-container) > picture > img,
+  .columns
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-top: 50px;
   }
 }
 @media (min-width: 0px) and (max-width: 767px) {
@@ -88,8 +103,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
-    margin-top: calc(0px - 64px);
-    height: calc(100% + 64px);
+    margin-top: calc(0px - 60px);
+    height: calc(100% + 60px);
   }
 }
 @media (min-width: 0px) and (max-width: 767px) {
@@ -106,7 +121,7 @@
     > :global(.__wab_slot)
     > picture
     > img {
-    margin-top: 64px;
+    margin-top: 60px;
   }
 }
 .column__uqrPb {
@@ -123,9 +138,9 @@
   }
 }
 .freeBox__gCfQi {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   top: auto;
   left: auto;
   width: 100%;
@@ -135,8 +150,8 @@
 }
 .freeBox__gCfQi > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: flex-start;
   align-items: stretch;
+  justify-content: flex-start;
   min-width: 0;
   margin-top: calc(0px - 50px);
   height: calc(100% + 50px);
@@ -152,9 +167,9 @@
   margin-top: 50px;
 }
 .freeBox__pkNBx {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -162,8 +177,8 @@
 }
 .freeBox__pkNBx > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   min-width: 0;
   margin-top: calc(0px - 20px);
   height: calc(100% + 20px);
@@ -203,9 +218,9 @@
   min-width: 0;
 }
 .freeBox___8YcRh {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -213,8 +228,8 @@
 }
 .freeBox___8YcRh > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   min-width: 0;
   margin-top: calc(0px - 10px);
   height: calc(100% + 10px);
@@ -240,9 +255,9 @@
   min-width: 0;
 }
 .freeBox__d7Gz3 {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -251,8 +266,8 @@
 }
 .freeBox__d7Gz3 > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: flex-start;
   align-items: stretch;
+  justify-content: flex-start;
   min-width: 0;
   margin-left: calc(0px - 5px);
   width: calc(100% + 5px);
@@ -301,9 +316,9 @@
   object-fit: cover;
 }
 .freeBox__qFLe {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
 }
 .freeBox__qFLe > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -336,14 +351,14 @@
   text-overflow: clip;
 }
 .freeBox__ohNtF {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
 }
 .freeBox__ohNtF > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: flex-start;
   align-items: stretch;
+  justify-content: flex-start;
   margin-left: calc(0px - 12px);
   width: calc(100% + 12px);
 }
@@ -399,12 +414,12 @@
   }
 }
 .freeBox__a1Ez {
-  flex-direction: column;
   display: flex;
   position: relative;
   width: 100%;
   left: auto;
   top: auto;
+  flex-direction: column;
   min-width: 0;
 }
 .freeBox__a1Ez > :global(.__wab_flex-container) {
@@ -539,9 +554,9 @@
   text-overflow: clip;
 }
 .column__eftbv {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 25%;
 }
 .column__eftbv > :global(.__wab_flex-container) {
@@ -565,12 +580,12 @@
   }
 }
 .freeBox__krlF0 {
-  flex-direction: column;
   display: flex;
   position: relative;
   width: 100%;
   left: auto;
   top: auto;
+  flex-direction: column;
   min-width: 0;
 }
 .freeBox__krlF0 > :global(.__wab_flex-container) {
@@ -706,9 +721,9 @@
   text-overflow: clip;
 }
 .column__eeLg {
-  flex-direction: column;
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 25%;
 }
 .column__eeLg > :global(.__wab_flex-container) {
@@ -732,12 +747,12 @@
   }
 }
 .freeBox__ePaSi {
-  flex-direction: column;
   display: flex;
   position: relative;
   width: 100%;
   left: auto;
   top: auto;
+  flex-direction: column;
   min-width: 0;
 }
 .freeBox__ePaSi > :global(.__wab_flex-container) {
@@ -816,9 +831,9 @@
   margin-top: calc(26px + 25px) !important;
 }
 .freeBox__wlWdw {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -829,8 +844,8 @@
 }
 .freeBox__wlWdw > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   min-width: 0;
   margin-left: calc(0px - 10px);
   width: calc(100% + 10px);
@@ -876,9 +891,9 @@
   text-overflow: clip;
 }
 .freeBox__xc9Nw {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -889,8 +904,8 @@
 }
 .freeBox__xc9Nw > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   min-width: 0;
   margin-left: calc(0px - 10px);
   width: calc(100% + 10px);
@@ -936,9 +951,9 @@
   text-overflow: clip;
 }
 .freeBox__qj6Jw {
-  flex-direction: row;
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -949,8 +964,8 @@
 }
 .freeBox__qj6Jw > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   min-width: 0;
   margin-left: calc(0px - 10px);
   width: calc(100% + 10px);
