@@ -112,7 +112,6 @@ function PlasmicWhoIsItForManagers__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -677,7 +676,13 @@ function PlasmicWhoIsItForManagers__RenderFunc(props: {
                     }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("95%" as const)
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? ("90%" as const)
+                        : ("100%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: phoneCutManagerspng93BXjvRmik1E6,

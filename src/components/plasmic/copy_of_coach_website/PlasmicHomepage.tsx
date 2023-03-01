@@ -171,7 +171,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -354,8 +353,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     alt={""}
                     className={classNames(sty.img__hLkRg)}
                     displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"1600px" as const}
+                    displayMaxHeight={"1000px" as const}
+                    displayMaxWidth={"1050px" as const}
                     displayMinHeight={"340px" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={

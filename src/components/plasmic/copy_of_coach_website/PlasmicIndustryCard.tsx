@@ -124,7 +124,7 @@ function PlasmicIndustryCard__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
+  const [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -132,7 +132,7 @@ function PlasmicIndustryCard__RenderFunc(props: {
         type: "private",
         variableType: "variant",
         initFunc: true
-          ? ($props, $state, $ctx) => $props.consumerElectronics
+          ? ({ $props, $state, $queries, $ctx }) => $props.consumerElectronics
           : undefined
       },
       {
@@ -140,7 +140,7 @@ function PlasmicIndustryCard__RenderFunc(props: {
         type: "private",
         variableType: "variant",
         initFunc: true
-          ? ($props, $state, $ctx) => $props.manufacturing
+          ? ({ $props, $state, $queries, $ctx }) => $props.manufacturing
           : undefined
       },
       {
@@ -148,29 +148,29 @@ function PlasmicIndustryCard__RenderFunc(props: {
         type: "private",
         variableType: "variant",
         initFunc: true
-          ? ($props, $state, $ctx) => $props.pharmaceuticals
+          ? ({ $props, $state, $queries, $ctx }) => $props.pharmaceuticals
           : undefined
       },
       {
         path: "telecom",
         type: "private",
         variableType: "variant",
-        initFunc: true ? ($props, $state, $ctx) => $props.telecom : undefined
+        initFunc: true
+          ? ({ $props, $state, $queries, $ctx }) => $props.telecom
+          : undefined
       },
       {
         path: "luxuryGoods",
         type: "private",
         variableType: "variant",
         initFunc: true
-          ? ($props, $state, $ctx) => $props.luxuryGoods
+          ? ({ $props, $state, $queries, $ctx }) => $props.luxuryGoods
           : undefined
       }
     ],
     [$props, $ctx]
   );
-  const $state = p.useDollarState(stateSpecs, $props, $ctx);
-
-  const [$queries, setDollarQueries] = React.useState({});
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
 
   const [isRootHover, triggerRootHoverProps] = useTrigger("useHover", {});
   const triggers = {

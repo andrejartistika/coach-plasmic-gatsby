@@ -114,7 +114,6 @@ function PlasmicWhoIsItForInstructionalDesigners__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -216,7 +215,7 @@ function PlasmicWhoIsItForInstructionalDesigners__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "The training tool \nthat helps you learn"
+                        ? "Build trainings that employees love"
                         : "Build trainings that employees  love"}
                     </h1>
                   </p.Stack>
@@ -666,7 +665,11 @@ function PlasmicWhoIsItForInstructionalDesigners__RenderFunc(props: {
                     }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? ("95%" as const)
+                        : ("100%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: phoneCutIdspngAudIdOwT2Basf6,

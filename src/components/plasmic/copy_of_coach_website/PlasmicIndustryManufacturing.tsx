@@ -76,7 +76,7 @@ export type PlasmicIndustryManufacturing__OverridesType = {
   section2?: p.Flex<"div">;
   section3?: p.Flex<"div">;
   section4?: p.Flex<"div">;
-  cta?: p.Flex<"div">;
+  cta2?: p.Flex<"div">;
   footer?: p.Flex<typeof Footer>;
 };
 
@@ -116,7 +116,6 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -218,21 +217,47 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                       sty.h1
                     )}
                   >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#000000" }}
-                      >
-                        {"Close the Skills Gap in Manufacturing with "}
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#3E7CB1" }}
-                      >
-                        {"Employee Training"}
-                      </span>
-                    </React.Fragment>
+                    {hasVariant(globalVariants, "screen", "tablet") ? (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Close the Skills Gap in Manufacturing with "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"Employee Training"}
+                        </span>
+                      </React.Fragment>
+                    ) : (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Close the Skills Gap in Manufacturing with "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"Employee Training"}
+                        </span>
+                      </React.Fragment>
+                    )}
                   </h1>
                 </p.Stack>
 
@@ -300,7 +325,13 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                   displayMaxWidth={"100%" as const}
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100%" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("80%" as const)
+                      : ("auto" as const)
+                  }
                   loading={"lazy" as const}
                   src={{
                     src: illustrationBannerManufacturingpngL8ZU0VxZo2YS1Y,
@@ -605,22 +636,22 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
 
           <p.Stack
             as={"div"}
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
+            data-plasmic-name={"cta2"}
+            data-plasmic-override={overrides.cta2}
             hasGap={true}
-            className={classNames(projectcss.all, sty.cta)}
+            className={classNames(projectcss.all, sty.cta2)}
           >
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__jJrMk)}
+                className={classNames(projectcss.all, sty.freeBox__yqUTv)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___90X2M
+                    sty.text___57Zc5
                   )}
                 >
                   {"READY TO START?"}
@@ -630,7 +661,7 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__wFHcI
+                    sty.text__r1E47
                   )}
                 >
                   {
@@ -641,7 +672,7 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__lDbEv)}
+                  className={classNames(projectcss.all, sty.freeBox__xAv4)}
                 >
                   <p.Stack
                     as={p.PlasmicLink}
@@ -649,7 +680,7 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link__kvL54
+                      sty.link__mHqOp
                     )}
                     component={Link}
                     href={"https://calendly.com/kalina-t/30min" as const}
@@ -660,7 +691,7 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__nKcfp
+                        sty.text___1SEnQ
                       )}
                     >
                       {"GET STARTED"}
@@ -668,7 +699,7 @@ function PlasmicIndustryManufacturing__RenderFunc(props: {
 
                     <p.PlasmicImg
                       alt={""}
-                      className={classNames(sty.img__hmIsF)}
+                      className={classNames(sty.img___7RTB)}
                       displayHeight={"auto" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
@@ -710,7 +741,7 @@ const PlasmicDescendants = {
     "section2",
     "section3",
     "section4",
-    "cta",
+    "cta2",
     "footer"
   ],
   reusableHeader: ["reusableHeader"],
@@ -720,7 +751,7 @@ const PlasmicDescendants = {
   section2: ["section2"],
   section3: ["section3"],
   section4: ["section4"],
-  cta: ["cta"],
+  cta2: ["cta2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -735,7 +766,7 @@ type NodeDefaultElementType = {
   section2: "div";
   section3: "div";
   section4: "div";
-  cta: "div";
+  cta2: "div";
   footer: typeof Footer;
 };
 
@@ -807,7 +838,7 @@ export const PlasmicIndustryManufacturing = Object.assign(
     section2: makeNodeComponent("section2"),
     section3: makeNodeComponent("section3"),
     section4: makeNodeComponent("section4"),
-    cta: makeNodeComponent("cta"),
+    cta2: makeNodeComponent("cta2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicIndustryManufacturing

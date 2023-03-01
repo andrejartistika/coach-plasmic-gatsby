@@ -112,11 +112,13 @@
   width: 50%;
   background: var(--token-Upjowq-BeelUUS);
   align-items: flex-end;
+  padding-left: 35px;
 }
 @media (max-width: 1024px) {
   .column___6HbPs {
     justify-content: flex-start;
     align-items: flex-start;
+    padding-left: 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 767px) {
@@ -804,7 +806,7 @@
     url("./images/webBgPattern1Png.png") top 89% left 50% / contain repeat-x,
     var(--token-Upjowq-BeelUUS);
   min-width: 0;
-  padding: 80px 0px;
+  padding: 80px 35px;
 }
 .cta2 > :global(.__wab_flex-container) {
   flex-direction: column;

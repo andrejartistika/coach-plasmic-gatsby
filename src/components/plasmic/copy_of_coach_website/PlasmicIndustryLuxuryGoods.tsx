@@ -78,7 +78,7 @@ export type PlasmicIndustryLuxuryGoods__OverridesType = {
   section3?: p.Flex<"div">;
   section4?: p.Flex<"div">;
   section5?: p.Flex<"div">;
-  cta?: p.Flex<"div">;
+  cta2?: p.Flex<"div">;
   footer?: p.Flex<typeof Footer>;
 };
 
@@ -118,7 +118,6 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -220,21 +219,47 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                       sty.h1
                     )}
                   >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#000000" }}
-                      >
-                        {"Deliver exceptional customer service and"}
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#3E7CB1" }}
-                      >
-                        {"drive sales"}
-                      </span>
-                    </React.Fragment>
+                    {hasVariant(globalVariants, "screen", "tablet") ? (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Deliver exceptional customer service and "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"drive sales"}
+                        </span>
+                      </React.Fragment>
+                    ) : (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Deliver exceptional customer service and"}
+                        </span>
+                        <React.Fragment>{"\n"}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"drive sales"}
+                        </span>
+                      </React.Fragment>
+                    )}
                   </h1>
                 </p.Stack>
 
@@ -302,7 +327,13 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                   displayMaxWidth={"100%" as const}
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100%" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("80%" as const)
+                      : ("auto" as const)
+                  }
                   loading={"lazy" as const}
                   src={{
                     src: illustrationBannerLuxuryGoodspngCjmY1Zxzvd1Hp0,
@@ -721,22 +752,22 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
 
           <p.Stack
             as={"div"}
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
+            data-plasmic-name={"cta2"}
+            data-plasmic-override={overrides.cta2}
             hasGap={true}
-            className={classNames(projectcss.all, sty.cta)}
+            className={classNames(projectcss.all, sty.cta2)}
           >
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__xGstu)}
+                className={classNames(projectcss.all, sty.freeBox__x153)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___3B8P
+                    sty.text__b6VTa
                   )}
                 >
                   {"READY TO START?"}
@@ -746,7 +777,7 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__nwwJf
+                    sty.text___10WhP
                   )}
                 >
                   {
@@ -757,7 +788,7 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__fr0Rm)}
+                  className={classNames(projectcss.all, sty.freeBox__tyJhh)}
                 >
                   <p.Stack
                     as={p.PlasmicLink}
@@ -765,7 +796,7 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link__suyiy
+                      sty.link__tKhpl
                     )}
                     component={Link}
                     href={"https://calendly.com/kalina-t/30min" as const}
@@ -776,7 +807,7 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__fVrHx
+                        sty.text__pVzZ5
                       )}
                     >
                       {"GET STARTED"}
@@ -784,7 +815,7 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
 
                     <p.PlasmicImg
                       alt={""}
-                      className={classNames(sty.img__xP13O)}
+                      className={classNames(sty.img__tzdPy)}
                       displayHeight={"auto" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
@@ -827,7 +858,7 @@ const PlasmicDescendants = {
     "section3",
     "section4",
     "section5",
-    "cta",
+    "cta2",
     "footer"
   ],
   reusableHeader: ["reusableHeader"],
@@ -838,7 +869,7 @@ const PlasmicDescendants = {
   section3: ["section3"],
   section4: ["section4"],
   section5: ["section5"],
-  cta: ["cta"],
+  cta2: ["cta2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -854,7 +885,7 @@ type NodeDefaultElementType = {
   section3: "div";
   section4: "div";
   section5: "div";
-  cta: "div";
+  cta2: "div";
   footer: typeof Footer;
 };
 
@@ -927,7 +958,7 @@ export const PlasmicIndustryLuxuryGoods = Object.assign(
     section3: makeNodeComponent("section3"),
     section4: makeNodeComponent("section4"),
     section5: makeNodeComponent("section5"),
-    cta: makeNodeComponent("cta"),
+    cta2: makeNodeComponent("cta2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicIndustryLuxuryGoods

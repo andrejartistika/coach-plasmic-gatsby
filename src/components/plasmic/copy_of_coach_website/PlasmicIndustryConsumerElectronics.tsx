@@ -118,7 +118,6 @@ function PlasmicIndustryConsumerElectronics__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -302,7 +301,13 @@ function PlasmicIndustryConsumerElectronics__RenderFunc(props: {
                   displayMaxWidth={"100%" as const}
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100%" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("80%" as const)
+                      : ("auto" as const)
+                  }
                   loading={"lazy" as const}
                   src={{
                     src: illustrationBannerConsumerElectronicspngKsPxbXlEGpu2G9,
