@@ -96,7 +96,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   background: #ffffff;
-  max-height: 1000px;
+  max-height: 750px;
   min-width: 0;
 }
 .columns__wjny4 > :nth-child(2n + 1) {
