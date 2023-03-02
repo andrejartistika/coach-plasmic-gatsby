@@ -79,7 +79,7 @@ export type PlasmicIndustryTelecommunication__OverridesType = {
   section3?: p.Flex<"div">;
   section4?: p.Flex<"div">;
   section5?: p.Flex<"div">;
-  cta?: p.Flex<"div">;
+  cta2?: p.Flex<"div">;
   footer?: p.Flex<typeof Footer>;
 };
 
@@ -119,7 +119,6 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -300,10 +299,20 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
                   className={classNames(sty.img__h22U)}
                   displayHeight={"auto" as const}
                   displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? ("100%" as const)
+                      : ("100%" as const)
+                  }
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100%" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("80%" as const)
+                      : ("auto" as const)
+                  }
                   loading={"lazy" as const}
                   src={{
                     src: illustrationBannerTelecompngBP6CzZj82A0R,
@@ -686,22 +695,22 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
 
           <p.Stack
             as={"div"}
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
+            data-plasmic-name={"cta2"}
+            data-plasmic-override={overrides.cta2}
             hasGap={true}
-            className={classNames(projectcss.all, sty.cta)}
+            className={classNames(projectcss.all, sty.cta2)}
           >
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__lwr7)}
+                className={classNames(projectcss.all, sty.freeBox__hwAy7)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__azn17
+                    sty.text__lhDfz
                   )}
                 >
                   {"READY TO START?"}
@@ -711,7 +720,7 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__luBaI
+                    sty.text__oL9Rt
                   )}
                 >
                   {
@@ -722,7 +731,7 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__v9RHl)}
+                  className={classNames(projectcss.all, sty.freeBox__dn0Gp)}
                 >
                   <p.Stack
                     as={p.PlasmicLink}
@@ -730,7 +739,7 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link__lhqls
+                      sty.link__krqjO
                     )}
                     component={Link}
                     href={"https://calendly.com/kalina-t/30min" as const}
@@ -741,7 +750,7 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__kkc9R
+                        sty.text__qOaY8
                       )}
                     >
                       {"GET STARTED"}
@@ -749,7 +758,7 @@ function PlasmicIndustryTelecommunication__RenderFunc(props: {
 
                     <p.PlasmicImg
                       alt={""}
-                      className={classNames(sty.img___7Dx5C)}
+                      className={classNames(sty.img__if6Xi)}
                       displayHeight={"auto" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
@@ -792,7 +801,7 @@ const PlasmicDescendants = {
     "section3",
     "section4",
     "section5",
-    "cta",
+    "cta2",
     "footer"
   ],
   reusableHeader: ["reusableHeader"],
@@ -803,7 +812,7 @@ const PlasmicDescendants = {
   section3: ["section3"],
   section4: ["section4"],
   section5: ["section5"],
-  cta: ["cta"],
+  cta2: ["cta2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -819,7 +828,7 @@ type NodeDefaultElementType = {
   section3: "div";
   section4: "div";
   section5: "div";
-  cta: "div";
+  cta2: "div";
   footer: typeof Footer;
 };
 
@@ -893,7 +902,7 @@ export const PlasmicIndustryTelecommunication = Object.assign(
     section3: makeNodeComponent("section3"),
     section4: makeNodeComponent("section4"),
     section5: makeNodeComponent("section5"),
-    cta: makeNodeComponent("cta"),
+    cta2: makeNodeComponent("cta2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicIndustryTelecommunication

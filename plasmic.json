@@ -1262,6 +1262,11 @@
           "id": "lD3uTZJ0-g2LCM",
           "name": "coach-icon-company.png",
           "filePath": "plasmic/copy_of_coach_website/images/coachIconCompanypng.png"
+        },
+        {
+          "id": "ymglJ9DdJ",
+          "name": "bannerimg2.png",
+          "filePath": "plasmic/coach_website_gatsby/images/bannerimg2Png.png"
         }
       ],
       "indirect": false,

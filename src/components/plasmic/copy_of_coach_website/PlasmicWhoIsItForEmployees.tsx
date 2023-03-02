@@ -112,7 +112,6 @@ function PlasmicWhoIsItForEmployees__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -445,7 +444,9 @@ function PlasmicWhoIsItForEmployees__RenderFunc(props: {
                       sty.text__rpIF
                     )}
                   >
-                    {"The games you can play\nat work"}
+                    {hasVariant(globalVariants, "screen", "tablet")
+                      ? "The games you can play at work"
+                      : "The games you can play\nat work"}
                   </div>
 
                   <div
@@ -593,7 +594,9 @@ function PlasmicWhoIsItForEmployees__RenderFunc(props: {
                       sty.text__puup1
                     )}
                   >
-                    {"READY TO START?"}
+                    {hasVariant(globalVariants, "screen", "tablet")
+                      ? "READY TO START?"
+                      : "READY TO START?"}
                   </div>
 
                   <div
@@ -605,6 +608,8 @@ function PlasmicWhoIsItForEmployees__RenderFunc(props: {
                   >
                     {hasVariant(globalVariants, "screen", "mobileOnly")
                       ? "Don’t just take our word.\nExperience the power of Coach yourself, and see the possibilities."
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? "Don’t just take our word for it - Experience the power of Coach yourself, and see the possibilities."
                       : "Don’t just take our word for it -\nExperience the power of Coach\nyourself, and see the possibilities."}
                   </div>
 
@@ -663,12 +668,18 @@ function PlasmicWhoIsItForEmployees__RenderFunc(props: {
                     className={classNames(sty.img__zxeq1)}
                     displayHeight={"100%" as const}
                     displayMaxHeight={"100%" as const}
-                    displayMaxWidth={"220px" as const}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("180px" as const)
+                        : ("220px" as const)
+                    }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("140px" as const)
+                        ? ("95%" as const)
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? ("95%" as const)
                         : ("100%" as const)
                     }
                     loading={"lazy" as const}

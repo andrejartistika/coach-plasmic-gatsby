@@ -79,7 +79,7 @@ export type PlasmicIndustryPharmaceuticals__OverridesType = {
   section3?: p.Flex<"div">;
   section4?: p.Flex<"div">;
   section5?: p.Flex<"div">;
-  cta?: p.Flex<"div">;
+  cta2?: p.Flex<"div">;
   footer?: p.Flex<typeof Footer>;
 };
 
@@ -119,7 +119,6 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -221,21 +220,47 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                       sty.h1
                     )}
                   >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#000000" }}
-                      >
-                        {"Stay up to date with "}
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#3E7CB1" }}
-                      >
-                        {"market demands"}
-                      </span>
-                    </React.Fragment>
+                    {hasVariant(globalVariants, "screen", "tablet") ? (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Stay up to date with "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"market demands"}
+                        </span>
+                      </React.Fragment>
+                    ) : (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#000000" }}
+                        >
+                          {"Stay up to date with "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#3E7CB1" }}
+                        >
+                          {"market demands"}
+                        </span>
+                      </React.Fragment>
+                    )}
                   </h1>
                 </p.Stack>
 
@@ -303,7 +328,13 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                   displayMaxWidth={"100%" as const}
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("100%" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("80%" as const)
+                      : ("auto" as const)
+                  }
                   loading={"lazy" as const}
                   src={{
                     src: illustrationBannerPharmapngSBeoAIw0Y4WDq,
@@ -505,7 +536,9 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                     sty.text___8QHfb
                   )}
                 >
-                  {"Workplace Safety and\nMachine Handling"}
+                  {hasVariant(globalVariants, "screen", "tablet")
+                    ? "Workplace Safety and Machine Handling"
+                    : "Workplace Safety and\nMachine Handling"}
                 </div>
 
                 <div
@@ -672,7 +705,9 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                     sty.text__nkmb
                   )}
                 >
-                  {"Research and Development \nTraining"}
+                  {hasVariant(globalVariants, "screen", "tablet")
+                    ? "Research and Development Training"
+                    : "Research and Development \nTraining"}
                 </div>
 
                 <div
@@ -727,22 +762,22 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
 
           <p.Stack
             as={"div"}
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
+            data-plasmic-name={"cta2"}
+            data-plasmic-override={overrides.cta2}
             hasGap={true}
-            className={classNames(projectcss.all, sty.cta)}
+            className={classNames(projectcss.all, sty.cta2)}
           >
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__voKh0)}
+                className={classNames(projectcss.all, sty.freeBox__myKAk)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__b8VO
+                    sty.text__rTkuZ
                   )}
                 >
                   {"READY TO START?"}
@@ -752,7 +787,7 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__qg6Pc
+                    sty.text__yxSbA
                   )}
                 >
                   {
@@ -763,7 +798,7 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___0Ytsf)}
+                  className={classNames(projectcss.all, sty.freeBox___3HySy)}
                 >
                   <p.Stack
                     as={p.PlasmicLink}
@@ -771,7 +806,7 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link__nx2Jz
+                      sty.link__kB6XX
                     )}
                     component={Link}
                     href={"https://calendly.com/kalina-t/30min" as const}
@@ -782,7 +817,7 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__h5Be5
+                        sty.text__gTLrv
                       )}
                     >
                       {"GET STARTED"}
@@ -790,7 +825,7 @@ function PlasmicIndustryPharmaceuticals__RenderFunc(props: {
 
                     <p.PlasmicImg
                       alt={""}
-                      className={classNames(sty.img__kQibY)}
+                      className={classNames(sty.img___1Nl1B)}
                       displayHeight={"auto" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
@@ -833,7 +868,7 @@ const PlasmicDescendants = {
     "section3",
     "section4",
     "section5",
-    "cta",
+    "cta2",
     "footer"
   ],
   reusableHeader: ["reusableHeader"],
@@ -844,7 +879,7 @@ const PlasmicDescendants = {
   section3: ["section3"],
   section4: ["section4"],
   section5: ["section5"],
-  cta: ["cta"],
+  cta2: ["cta2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -860,7 +895,7 @@ type NodeDefaultElementType = {
   section3: "div";
   section4: "div";
   section5: "div";
-  cta: "div";
+  cta2: "div";
   footer: typeof Footer;
 };
 
@@ -933,7 +968,7 @@ export const PlasmicIndustryPharmaceuticals = Object.assign(
     section3: makeNodeComponent("section3"),
     section4: makeNodeComponent("section4"),
     section5: makeNodeComponent("section5"),
-    cta: makeNodeComponent("cta"),
+    cta2: makeNodeComponent("cta2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicIndustryPharmaceuticals

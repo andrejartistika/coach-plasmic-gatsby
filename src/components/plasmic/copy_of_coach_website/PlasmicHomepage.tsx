@@ -57,7 +57,7 @@ import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: ygn
 import DownArrowIcon from "./icons/PlasmicIcon__DownArrow"; // plasmic-import: 21ZYLfZ9UXFykz/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: Eg0Wi1P4Mcw9OO/icon
 import buttonCaretWhitesvg2EkMgwDrEmqPnVl from "./images/buttonCaretWhitesvg2.svg"; // plasmic-import: ekMgwDrEmqPnVl/picture
-import bannerimg1PngJvrwRfX70KEqgz from "./images/bannerimg1Png.png"; // plasmic-import: JvrwRfX70kEQGZ/picture
+import bannerimg2PngYmglJ9DdJ from "../coach_website_gatsby/images/bannerimg2Png.png"; // plasmic-import: ymglJ9DdJ/picture
 import group58PngMvc2RMleKXbTz from "./images/group58Png.png"; // plasmic-import: MVC2rMleKXbTZ-/picture
 import group937SvgOzNkuZf699WA2 from "./images/group937Svg.svg"; // plasmic-import: OZNkuZf699w-A2/picture
 import frame910JpgHtHzLexrwy3Eck from "./images/frame910Jpg.jpeg"; // plasmic-import: htHzLEXRWY3eck/picture
@@ -171,7 +171,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -354,8 +353,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     alt={""}
                     className={classNames(sty.img__hLkRg)}
                     displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"1600px" as const}
+                    displayMaxHeight={"750px" as const}
+                    displayMaxWidth={"1050px" as const}
                     displayMinHeight={"340px" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={
@@ -366,9 +365,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         : ("100%" as const)
                     }
                     src={{
-                      src: bannerimg1PngJvrwRfX70KEqgz,
-                      fullWidth: 1436,
-                      fullHeight: 1410,
+                      src: bannerimg2PngYmglJ9DdJ,
+                      fullWidth: 2155,
+                      fullHeight: 2116,
                       aspectRatio: undefined
                     }}
                   />

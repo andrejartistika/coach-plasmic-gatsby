@@ -111,7 +111,6 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -213,7 +212,7 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "The training tool \nthat helps you learn"
+                        ? "Cost-effective employee training"
                         : "Cost-effective\n employee training"}
                     </h1>
                   </p.Stack>
@@ -669,12 +668,16 @@ function PlasmicWhoIsItForCeOs__RenderFunc(props: {
                     displayMaxHeight={"100%" as const}
                     displayMaxWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("140px" as const)
+                        ? ("180px" as const)
                         : ("220px" as const)
                     }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? ("95%" as const)
+                        : ("100%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: phoneCutCeospng9Q0AtDqSr7Crgp,

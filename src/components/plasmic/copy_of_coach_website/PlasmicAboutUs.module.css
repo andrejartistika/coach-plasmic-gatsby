@@ -132,6 +132,12 @@
   justify-content: flex-start;
   align-items: flex-end;
   background: var(--token-Upjowq-BeelUUS);
+  padding-left: 35px;
+}
+@media (max-width: 1024px) {
+  .column__abVim {
+    padding-left: 0px;
+  }
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .column__abVim {
@@ -340,7 +346,7 @@
   transform: none;
   align-self: auto;
   min-width: 0;
-  padding: 0px 0px 71px;
+  padding: 0px 35px 71px;
   border-width: 2px;
 }
 @media (max-width: 1024px) {
@@ -887,7 +893,7 @@
     url("./images/webBgPattern1Png.png") top 89% left 50% / contain repeat-x,
     var(--token-Upjowq-BeelUUS);
   min-width: 0;
-  padding: 80px 0px;
+  padding: 80px 35px;
 }
 .cta3 > :global(.__wab_flex-container) {
   flex-direction: column;
