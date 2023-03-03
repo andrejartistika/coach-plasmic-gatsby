@@ -419,7 +419,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#000000" }}
                     >
-                      {"is here to change the game."}
+                      {"is here to change the learning game."}
                     </span>
                   </React.Fragment>
                 )}
@@ -1849,9 +1849,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h2__y1S3S
                 )}
               >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "Who is it for?"
-                  : "Who is it for?"}
+                {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                  "Who is it for?"
+                ) : (
+                  <React.Fragment>
+                    <React.Fragment>{"Discover how "}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#3E7CB1" }}
+                    >
+                      {"Coach"}
+                    </span>
+                    <React.Fragment>{" helps professionals"}</React.Fragment>
+                  </React.Fragment>
+                )}
               </h2>
 
               <div
