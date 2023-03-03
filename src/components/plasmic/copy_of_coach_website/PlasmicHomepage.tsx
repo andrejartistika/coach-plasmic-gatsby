@@ -281,7 +281,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           {
-                            "Coach helps companies detect and fix knowledge gaps through personalized training"
+                            "Coach helps companies detect and fix knowledge gaps through personalized training."
                           }
                         </div>
                       </p.Stack>
@@ -353,7 +353,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     alt={""}
                     className={classNames(sty.img__hLkRg)}
                     displayHeight={"auto" as const}
-                    displayMaxHeight={"750px" as const}
+                    displayMaxHeight={"800px" as const}
                     displayMaxWidth={"1050px" as const}
                     displayMinHeight={"340px" as const}
                     displayMinWidth={"0" as const}
@@ -408,12 +408,18 @@ function PlasmicHomepage__RenderFunc(props: {
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
-                    <React.Fragment>{"What is "}</React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#3E7CB1" }}
                     >
-                      {"Coach?"}
+                      {"Coach "}
+                    </span>
+                    <React.Fragment>{""}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#000000" }}
+                    >
+                      {"is here to change the game."}
                     </span>
                   </React.Fragment>
                 )}
@@ -496,7 +502,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "Coach is a learning platform that helps companies detect and fix knowledge gaps through interactive learning games. \n\nIt offers a unique and engaging learning experience for employees that promotes skill development and knowledge mastery and simplifies content creation for management with easy-to-use features in the admin panel.\n\nThrough science-based methodologies like adaptive learning, spaced repetition and gamification, it guarantees efficient knowledge retention rates."
-                        : "Coach is a learning platform that helps companies detect and fix knowledge gaps through interactive learning games. \n\nCoach offers a unique and engaging learning experience for employees that promotes skill development and knowledge mastery, and uses science-based methodologies like adaptive learning, spaced repetition, and gamification to guarantee efficient knowledge retention rates.\n\nCoach simplifies content creation for management with easy-to-use features in the admin panel, and provides detailed statistics for assessment and improvement of training effectiveness. "}
+                        : "Deliver bite-sized, interactive learning modules that are tailored to your needs and preferences.  \n\nSay goodbye to boring, ineffective training and hello to a whole new world of learning."}
                     </h1>
                   </div>
                 ) : null}
@@ -726,7 +732,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Import content you already have, easily create new modules or let our team take care of it. Cover company-specific knowledge like: product training, procedures & safety, sales training, onboarding and much more."
+                        "Let's face it – creating training content from scratch can be a daunting and time-consuming task. \n\nCoach lets you import content you already have and easily create new modules. If you don't have the time - let our team take care of it! Cover company-specific knowledge like product training, procedures & safety, sales training, and onboarding with a few clicks. "
                       }
                     </div>
 
@@ -745,7 +751,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text___4RxyK
                         )}
                       >
-                        {"8 QUESTION TYPES + LESSONS IN ANY FORMAT"}
+                        {"LESSONS IN ANY FORMAT"}
                       </div>
                     </div>
 
@@ -912,7 +918,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h2___2Oh7J
                       )}
                     >
-                      {"Deploy training when it's most needed"}
+                      {"Breeze through training"}
                     </h2>
 
                     <div
@@ -923,7 +929,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "In the app, employees test and refresh their knowledge through a set of learning games. Coach figures out their knowledge gaps, adapts the learning path and assigns learning materials to help them improve."
+                        "Imagine completing your company training and feeling like you just played a game. \n\nCoach transforms learning into a fun, interactive game, that tests your knowledge and keeps you engaged.\nThrough games, Coach figures out your knowledge gaps, adapts the learning path, and assigns learning materials to help you improve. "
                       }
                     </div>
 
@@ -942,7 +948,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__yMlVl
                         )}
                       >
-                        {"ENGAGING LEARNING EXPERIENCE"}
+                        {"8 INTERACTIVE GAMES WITH DIFFERENT QUESTION TYPES"}
                       </div>
                     </div>
 
@@ -1062,7 +1068,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Get in-depth analytics about knowledge levels across the organization. Coach lets you track hundreds of important KPI’s that will help you make better decisions and improve performance."
+                        "Coach offers powerful analytics with hundreds of KPIs that allow you to see your knowledge gaps, track your progress, and get personalized recommendations for what to study next.\n\nManagers can now see how different teams and locations are performing – and use that data to drive the training efforts and make better decisions that improve performance."
                       }
                     </div>
 
