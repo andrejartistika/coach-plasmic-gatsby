@@ -19,7 +19,7 @@
     "@plasmicapp/cli": "^0.1.211",
     "@plasmicapp/host": "^1.0.105",
     "@plasmicapp/loader-gatsby": "^1.0.220",
-    "@plasmicapp/react-web": "^0.2.162",
+    "@plasmicapp/react-web": "^0.2.163",
     "@plasmicpkgs/antd": "^2.0.20",
     "@plasmicpkgs/plasmic-nav": "^0.0.75",
     "@plasmicpkgs/react-awesome-reveal": "^3.8.105",
