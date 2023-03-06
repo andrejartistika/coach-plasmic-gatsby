@@ -25,7 +25,7 @@ export function Header({ isDark, data }) {
           className="header--logo"
           src={isDark ? LogoDarkMode : Logo}
           onClick={() => {
-            // navigate('/');
+            navigate('/');
             document.body.style.overflow = 'scroll';
             setShowMenu(false);
           }}
