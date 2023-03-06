@@ -105,571 +105,572 @@ function PlasmicFooter__RenderFunc(props: {
   });
 
   return (
-    <div> foooota </div> // <div //   data-plasmic-name={"root"}
-  ) as //   data-plasmic-override={overrides.root}
-  //   data-plasmic-root={true}
-  //   data-plasmic-for-node={forNode}
-  //   className={classNames(
-  //     projectcss.all,
-  //     projectcss.root_reset,
-  //     projectcss.plasmic_default_styles,
-  //     projectcss.plasmic_mixins,
-  //     projectcss.plasmic_tokens,
-  //     sty.root
-  //   )}
-  // >
-  //   <p.Stack
-  //     as={"div"}
-  //     data-plasmic-name={"columns"}
-  //     data-plasmic-override={overrides.columns}
-  //     hasGap={true}
-  //     className={classNames(projectcss.all, sty.columns)}
-  //   >
-  //     <div className={classNames(projectcss.all, sty.column__uqrPb)}>
-  //       <p.Stack
-  //         as={"div"}
-  //         hasGap={true}
-  //         className={classNames(projectcss.all, sty.freeBox__gCfQi)}
-  //       >
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox__pkNBx)}
-  //         >
-  //           <p.PlasmicImg
-  //             alt={""}
-  //             className={classNames(sty.img__oMRti)}
-  //             displayHeight={"40px" as const}
-  //             displayMaxHeight={"none" as const}
-  //             displayMaxWidth={"none" as const}
-  //             displayMinHeight={"0" as const}
-  //             displayMinWidth={"0" as const}
-  //             displayWidth={"130px" as const}
-  //             src={{
-  //               src: coachlogoBlacksvgI7FqOqJlgt4WDp,
-  //               fullWidth: 300,
-  //               fullHeight: 99,
-  //               aspectRatio: 3.02439
-  //             }}
-  //           />
+    <div
+      data-plasmic-name={'root'}
+      data-plasmic-override={overrides.root}
+      data-plasmic-root={true}
+      data-plasmic-for-node={forNode}
+      className={classNames(
+        projectcss.all,
+        projectcss.root_reset,
+        projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
+        sty.root
+      )}
+    >
+      <p.Stack
+        as={'div'}
+        data-plasmic-name={'columns'}
+        data-plasmic-override={overrides.columns}
+        hasGap={true}
+        className={classNames(projectcss.all, sty.columns)}
+      >
+        <div className={classNames(projectcss.all, sty.column__uqrPb)}>
+          <p.Stack
+            as={'div'}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__gCfQi)}
+          >
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__pkNBx)}
+            >
+              <p.PlasmicImg
+                alt={''}
+                className={classNames(sty.img__oMRti)}
+                displayHeight={'40px' as const}
+                displayMaxHeight={'none' as const}
+                displayMaxWidth={'none' as const}
+                displayMinHeight={'0' as const}
+                displayMinWidth={'0' as const}
+                displayWidth={'130px' as const}
+                src={{
+                  src: coachlogoBlacksvgI7FqOqJlgt4WDp,
+                  fullWidth: 300,
+                  fullHeight: 99,
+                  aspectRatio: 3.02439,
+                }}
+              />
 
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text__yQq36
-  //             )}
-  //           >
-  //             {
-  //               "Coach helps you create and deliver\npersonalized reinforcement training, fast."
-  //             }
-  //           </div>
-  //         </p.Stack>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__yQq36
+                )}
+              >
+                {
+                  'Coach helps you create and deliver\npersonalized reinforcement training, fast.'
+                }
+              </div>
+            </p.Stack>
 
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox___8YcRh)}
-  //         >
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text__dp8Lm
-  //             )}
-  //           >
-  //             {"GET OUR APP"}
-  //           </div>
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___8YcRh)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__dp8Lm
+                )}
+              >
+                {'GET OUR APP'}
+              </div>
 
-  //           <p.Stack
-  //             as={"div"}
-  //             hasGap={true}
-  //             className={classNames(projectcss.all, sty.freeBox__d7Gz3)}
-  //           >
-  //             <p.PlasmicLink
-  //               className={classNames(
-  //                 projectcss.all,
-  //                 projectcss.a,
-  //                 sty.link__aTeUg
-  //               )}
-  //               component={Link}
-  //               platform={"gatsby"}
-  //             >
-  //               <p.PlasmicLink
-  //                 className={classNames(
-  //                   projectcss.all,
-  //                   projectcss.a,
-  //                   sty.link__w3G25
-  //                 )}
-  //                 component={Link}
-  //                 href={
-  //                   "https://apps.apple.com/za/app/coach-efficient-microlearning/id1593632133" as const
-  //                 }
-  //                 platform={"gatsby"}
-  //                 target={"_blank" as const}
-  //               >
-  //                 <p.PlasmicImg
-  //                   alt={""}
-  //                   className={classNames(sty.img__o57Xy)}
-  //                   displayHeight={"45px" as const}
-  //                   displayMaxHeight={"none" as const}
-  //                   displayMaxWidth={"100%" as const}
-  //                   displayMinHeight={"0" as const}
-  //                   displayMinWidth={"0" as const}
-  //                   displayWidth={"auto" as const}
-  //                   loading={"lazy" as const}
-  //                   src={{
-  //                     src: appStoreI1SvgXhT7VtKlUQxE5,
-  //                     fullWidth: 300,
-  //                     fullHeight: 105,
-  //                     aspectRatio: 2.869565
-  //                   }}
-  //                 />
-  //               </p.PlasmicLink>
-  //             </p.PlasmicLink>
+              <p.Stack
+                as={'div'}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__d7Gz3)}
+              >
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__aTeUg
+                  )}
+                  component={Link}
+                  platform={'gatsby'}
+                >
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__w3G25
+                    )}
+                    component={Link}
+                    href={
+                      'https://apps.apple.com/za/app/coach-efficient-microlearning/id1593632133' as const
+                    }
+                    platform={'gatsby'}
+                    target={'_blank' as const}
+                  >
+                    <p.PlasmicImg
+                      alt={''}
+                      className={classNames(sty.img__o57Xy)}
+                      displayHeight={'45px' as const}
+                      displayMaxHeight={'none' as const}
+                      displayMaxWidth={'100%' as const}
+                      displayMinHeight={'0' as const}
+                      displayMinWidth={'0' as const}
+                      displayWidth={'auto' as const}
+                      loading={'lazy' as const}
+                      src={{
+                        src: appStoreI1SvgXhT7VtKlUQxE5,
+                        fullWidth: 300,
+                        fullHeight: 105,
+                        aspectRatio: 2.869565,
+                      }}
+                    />
+                  </p.PlasmicLink>
+                </p.PlasmicLink>
 
-  //             <p.PlasmicLink
-  //               className={classNames(
-  //                 projectcss.all,
-  //                 projectcss.a,
-  //                 sty.link__m770P
-  //               )}
-  //               component={Link}
-  //               href={
-  //                 "https://play.google.com/store/apps/details?id=com.konceptiva.coach" as const
-  //               }
-  //               platform={"gatsby"}
-  //               target={"_blank" as const}
-  //             >
-  //               <p.PlasmicImg
-  //                 alt={""}
-  //                 className={classNames(sty.img__pL4)}
-  //                 displayHeight={"45px" as const}
-  //                 displayMaxHeight={"none" as const}
-  //                 displayMaxWidth={"100%" as const}
-  //                 displayMinHeight={"0" as const}
-  //                 displayMinWidth={"0" as const}
-  //                 displayWidth={"auto" as const}
-  //                 loading={"lazy" as const}
-  //                 src={{
-  //                   src: googlePlayI1SvgDqvut8NAl7TVz,
-  //                   fullWidth: 300,
-  //                   fullHeight: 94,
-  //                   aspectRatio: 3.195652
-  //                 }}
-  //               />
-  //             </p.PlasmicLink>
-  //           </p.Stack>
-  //         </p.Stack>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__m770P
+                  )}
+                  component={Link}
+                  href={
+                    'https://play.google.com/store/apps/details?id=com.konceptiva.coach' as const
+                  }
+                  platform={'gatsby'}
+                  target={'_blank' as const}
+                >
+                  <p.PlasmicImg
+                    alt={''}
+                    className={classNames(sty.img__pL4)}
+                    displayHeight={'45px' as const}
+                    displayMaxHeight={'none' as const}
+                    displayMaxWidth={'100%' as const}
+                    displayMinHeight={'0' as const}
+                    displayMinWidth={'0' as const}
+                    displayWidth={'auto' as const}
+                    loading={'lazy' as const}
+                    src={{
+                      src: googlePlayI1SvgDqvut8NAl7TVz,
+                      fullWidth: 300,
+                      fullHeight: 94,
+                      aspectRatio: 3.195652,
+                    }}
+                  />
+                </p.PlasmicLink>
+              </p.Stack>
+            </p.Stack>
 
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox__qFLe)}
-  //         >
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text__qmU2
-  //             )}
-  //           >
-  //             {"FOLLOW US"}
-  //           </div>
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__qFLe)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__qmU2
+                )}
+              >
+                {'FOLLOW US'}
+              </div>
 
-  //           <p.Stack
-  //             as={"div"}
-  //             hasGap={true}
-  //             className={classNames(projectcss.all, sty.freeBox__ohNtF)}
-  //           >
-  //             <p.PlasmicLink
-  //               className={classNames(
-  //                 projectcss.all,
-  //                 projectcss.a,
-  //                 sty.link__g67Ls
-  //               )}
-  //               component={Link}
-  //               href={"https://www.facebook.com/konceptiva" as const}
-  //               platform={"gatsby"}
-  //             >
-  //               <FooterIconFbsvgIcon
-  //                 className={classNames(projectcss.all, sty.svg__rHvXs)}
-  //                 role={"img"}
-  //               />
-  //             </p.PlasmicLink>
+              <p.Stack
+                as={'div'}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__ohNtF)}
+              >
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__g67Ls
+                  )}
+                  component={Link}
+                  href={'https://www.facebook.com/konceptiva' as const}
+                  platform={'gatsby'}
+                >
+                  <FooterIconFbsvgIcon
+                    className={classNames(projectcss.all, sty.svg__rHvXs)}
+                    role={'img'}
+                  />
+                </p.PlasmicLink>
 
-  //             <p.PlasmicLink
-  //               className={classNames(
-  //                 projectcss.all,
-  //                 projectcss.a,
-  //                 sty.link__mnYzB
-  //               )}
-  //               component={Link}
-  //               href={"https://www.instagram.com/konceptiva/" as const}
-  //               platform={"gatsby"}
-  //             >
-  //               <FooterIconInstagramsvgIcon
-  //                 className={classNames(projectcss.all, sty.svg__gTBzQ)}
-  //                 role={"img"}
-  //               />
-  //             </p.PlasmicLink>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__mnYzB
+                  )}
+                  component={Link}
+                  href={'https://www.instagram.com/konceptiva/' as const}
+                  platform={'gatsby'}
+                >
+                  <FooterIconInstagramsvgIcon
+                    className={classNames(projectcss.all, sty.svg__gTBzQ)}
+                    role={'img'}
+                  />
+                </p.PlasmicLink>
 
-  //             <p.PlasmicLink
-  //               className={classNames(
-  //                 projectcss.all,
-  //                 projectcss.a,
-  //                 sty.link__l187
-  //               )}
-  //               component={Link}
-  //               href={
-  //                 "https://www.linkedin.com/company/konceptiva-digital/" as const
-  //               }
-  //               platform={"gatsby"}
-  //             >
-  //               <FooterIconLinkedinsvgIcon
-  //                 className={classNames(projectcss.all, sty.svg___0TowB)}
-  //                 role={"img"}
-  //               />
-  //             </p.PlasmicLink>
-  //           </p.Stack>
-  //         </p.Stack>
-  //       </p.Stack>
-  //     </div>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__l187
+                  )}
+                  component={Link}
+                  href={
+                    'https://www.linkedin.com/company/konceptiva-digital/' as const
+                  }
+                  platform={'gatsby'}
+                >
+                  <FooterIconLinkedinsvgIcon
+                    className={classNames(projectcss.all, sty.svg___0TowB)}
+                    role={'img'}
+                  />
+                </p.PlasmicLink>
+              </p.Stack>
+            </p.Stack>
+          </p.Stack>
+        </div>
 
-  //     <div className={classNames(projectcss.all, sty.column__lViyu)}>
-  //       <p.Stack
-  //         as={"div"}
-  //         hasGap={true}
-  //         className={classNames(projectcss.all, sty.freeBox__a1Ez)}
-  //       >
-  //         <div
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.__wab_text,
-  //             sty.text__wOg2
-  //           )}
-  //         >
-  //           {"Product"}
-  //         </div>
+        <div className={classNames(projectcss.all, sty.column__lViyu)}>
+          <p.Stack
+            as={'div'}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__a1Ez)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__wOg2
+              )}
+            >
+              {'Product'}
+            </div>
 
-  //         <p.PlasmicLink
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.a,
-  //             projectcss.__wab_text,
-  //             sty.link__jkIgE
-  //           )}
-  //           component={Link}
-  //           href={`/features`}
-  //           platform={"gatsby"}
-  //         >
-  //           {"Features"}
-  //         </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.link__jkIgE
+              )}
+              component={Link}
+              href={`/features`}
+              platform={'gatsby'}
+            >
+              {'Features'}
+            </p.PlasmicLink>
 
-  //         <p.PlasmicLink
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.a,
-  //             projectcss.__wab_text,
-  //             sty.link__o7ZN
-  //           )}
-  //           component={Link}
-  //           href={`/who-is-it-for-managers`}
-  //           platform={"gatsby"}
-  //         >
-  //           {"For Managers"}
-  //         </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.link__o7ZN
+              )}
+              component={Link}
+              href={`/who-is-it-for-managers`}
+              platform={'gatsby'}
+            >
+              {'For Managers'}
+            </p.PlasmicLink>
 
-  //         <p.PlasmicLink
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.a,
-  //             projectcss.__wab_text,
-  //             sty.link__bpGoC
-  //           )}
-  //           component={Link}
-  //           href={`/who-is-it-for-instructional-designers`}
-  //           platform={"gatsby"}
-  //         >
-  //           {"For IDs"}
-  //         </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.link__bpGoC
+              )}
+              component={Link}
+              href={`/who-is-it-for-instructional-designers`}
+              platform={'gatsby'}
+            >
+              {'For IDs'}
+            </p.PlasmicLink>
 
-  //         <p.PlasmicLink
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.a,
-  //             projectcss.__wab_text,
-  //             sty.link__xwkNt
-  //           )}
-  //           component={Link}
-  //           href={`/who-is-it-for-ceos`}
-  //           platform={"gatsby"}
-  //         >
-  //           {"For CEOs"}
-  //         </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.link__xwkNt
+              )}
+              component={Link}
+              href={`/who-is-it-for-ceos`}
+              platform={'gatsby'}
+            >
+              {'For CEOs'}
+            </p.PlasmicLink>
 
-  //         <p.PlasmicLink
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.a,
-  //             projectcss.__wab_text,
-  //             sty.link__xtAsb
-  //           )}
-  //           component={Link}
-  //           href={`/who-is-it-for-employees`}
-  //           platform={"gatsby"}
-  //         >
-  //           {"For Employees"}
-  //         </p.PlasmicLink>
-  //       </p.Stack>
-  //     </div>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.link__xtAsb
+              )}
+              component={Link}
+              href={`/who-is-it-for-employees`}
+              platform={'gatsby'}
+            >
+              {'For Employees'}
+            </p.PlasmicLink>
+          </p.Stack>
+        </div>
 
-  //     <p.Stack
-  //       as={"div"}
-  //       hasGap={true}
-  //       className={classNames(projectcss.all, sty.column__eftbv)}
-  //     >
-  //       <p.Stack
-  //         as={"div"}
-  //         hasGap={true}
-  //         className={classNames(projectcss.all, sty.freeBox__krlF0)}
-  //       >
-  //         <div
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.__wab_text,
-  //             sty.text__bO71L
-  //           )}
-  //         >
-  //           {"INDUSTRIES"}
-  //         </div>
-  //       </p.Stack>
+        <p.Stack
+          as={'div'}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.column__eftbv)}
+        >
+          <p.Stack
+            as={'div'}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__krlF0)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__bO71L
+              )}
+            >
+              {'INDUSTRIES'}
+            </div>
+          </p.Stack>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link__xgg7W
-  //         )}
-  //         component={Link}
-  //         href={`/industry-consumer-electronics`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"Consumer Electronics"}
-  //       </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__xgg7W
+            )}
+            component={Link}
+            href={`/industry-consumer-electronics`}
+            platform={'gatsby'}
+          >
+            {'Consumer Electronics'}
+          </p.PlasmicLink>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link___2MupH
-  //         )}
-  //         component={Link}
-  //         href={`/industry-manufacturing`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"Manufacturing"}
-  //       </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link___2MupH
+            )}
+            component={Link}
+            href={`/industry-manufacturing`}
+            platform={'gatsby'}
+          >
+            {'Manufacturing'}
+          </p.PlasmicLink>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link___95XGh
-  //         )}
-  //         component={Link}
-  //         href={`/industry-telecommunication`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"Telecom"}
-  //       </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link___95XGh
+            )}
+            component={Link}
+            href={`/industry-telecommunication`}
+            platform={'gatsby'}
+          >
+            {'Telecom'}
+          </p.PlasmicLink>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link__udKjx
-  //         )}
-  //         component={Link}
-  //         href={`/industry-pharmaceuticals`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"Pharmaceuticals"}
-  //       </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__udKjx
+            )}
+            component={Link}
+            href={`/industry-pharmaceuticals`}
+            platform={'gatsby'}
+          >
+            {'Pharmaceuticals'}
+          </p.PlasmicLink>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link__wgv9W
-  //         )}
-  //         component={Link}
-  //         href={`/industry-luxury-goods`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"Luxury Goods"}
-  //       </p.PlasmicLink>
-  //     </p.Stack>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__wgv9W
+            )}
+            component={Link}
+            href={`/industry-luxury-goods`}
+            platform={'gatsby'}
+          >
+            {'Luxury Goods'}
+          </p.PlasmicLink>
+        </p.Stack>
 
-  //     <p.Stack
-  //       as={"div"}
-  //       hasGap={true}
-  //       className={classNames(projectcss.all, sty.column__eeLg)}
-  //     >
-  //       <p.Stack
-  //         as={"div"}
-  //         hasGap={true}
-  //         className={classNames(projectcss.all, sty.freeBox__ePaSi)}
-  //       >
-  //         <div
-  //           className={classNames(
-  //             projectcss.all,
-  //             projectcss.__wab_text,
-  //             sty.text__hOkWj
-  //           )}
-  //         >
-  //           {"Company"}
-  //         </div>
-  //       </p.Stack>
+        <p.Stack
+          as={'div'}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.column__eeLg)}
+        >
+          <p.Stack
+            as={'div'}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__ePaSi)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__hOkWj
+              )}
+            >
+              {'Company'}
+            </div>
+          </p.Stack>
 
-  //       <p.PlasmicLink
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.a,
-  //           projectcss.__wab_text,
-  //           sty.link__haQob
-  //         )}
-  //         component={Link}
-  //         href={`/about-us`}
-  //         platform={"gatsby"}
-  //       >
-  //         {"About Us"}
-  //       </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__haQob
+            )}
+            component={Link}
+            href={`/about-us`}
+            platform={'gatsby'}
+          >
+            {'About Us'}
+          </p.PlasmicLink>
 
-  //       <div
-  //         className={classNames(
-  //           projectcss.all,
-  //           projectcss.__wab_text,
-  //           sty.text__lA74F
-  //         )}
-  //       >
-  //         {"CoNTACT"}
-  //       </div>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__lA74F
+            )}
+          >
+            {'CoNTACT'}
+          </div>
 
-  //       {true ? (
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox__wlWdw)}
-  //         >
-  //           <p.PlasmicImg
-  //             alt={""}
-  //             className={classNames(sty.img___74VP)}
-  //             displayHeight={"25px" as const}
-  //             displayMaxHeight={"none" as const}
-  //             displayMaxWidth={"100%" as const}
-  //             displayMinHeight={"0" as const}
-  //             displayMinWidth={"0" as const}
-  //             displayWidth={"25px" as const}
-  //             loading={"lazy" as const}
-  //             src={{
-  //               src: coachIconPhonepngNqMrIjhOaxBjzn,
-  //               fullWidth: 61,
-  //               fullHeight: 62,
-  //               aspectRatio: undefined
-  //             }}
-  //           />
+          {true ? (
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__wlWdw)}
+            >
+              <p.PlasmicImg
+                alt={''}
+                className={classNames(sty.img___74VP)}
+                displayHeight={'25px' as const}
+                displayMaxHeight={'none' as const}
+                displayMaxWidth={'100%' as const}
+                displayMinHeight={'0' as const}
+                displayMinWidth={'0' as const}
+                displayWidth={'25px' as const}
+                loading={'lazy' as const}
+                src={{
+                  src: coachIconPhonepngNqMrIjhOaxBjzn,
+                  fullWidth: 61,
+                  fullHeight: 62,
+                  aspectRatio: undefined,
+                }}
+              />
 
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text__qquOs
-  //             )}
-  //           >
-  //             {"+38923113953"}
-  //           </div>
-  //         </p.Stack>
-  //       ) : null}
-  //       {true ? (
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox__xc9Nw)}
-  //         >
-  //           <p.PlasmicImg
-  //             alt={""}
-  //             className={classNames(sty.img__cYIpJ)}
-  //             displayHeight={"25px" as const}
-  //             displayMaxHeight={"none" as const}
-  //             displayMaxWidth={"100%" as const}
-  //             displayMinHeight={"0" as const}
-  //             displayMinWidth={"0" as const}
-  //             displayWidth={"25px" as const}
-  //             loading={"lazy" as const}
-  //             src={{
-  //               src: coachIconMailpngCHl1YXwRVzCpB,
-  //               fullWidth: 61,
-  //               fullHeight: 62,
-  //               aspectRatio: undefined
-  //             }}
-  //           />
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__qquOs
+                )}
+              >
+                {'+38923113953'}
+              </div>
+            </p.Stack>
+          ) : null}
+          {true ? (
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__xc9Nw)}
+            >
+              <p.PlasmicImg
+                alt={''}
+                className={classNames(sty.img__cYIpJ)}
+                displayHeight={'25px' as const}
+                displayMaxHeight={'none' as const}
+                displayMaxWidth={'100%' as const}
+                displayMinHeight={'0' as const}
+                displayMinWidth={'0' as const}
+                displayWidth={'25px' as const}
+                loading={'lazy' as const}
+                src={{
+                  src: coachIconMailpngCHl1YXwRVzCpB,
+                  fullWidth: 61,
+                  fullHeight: 62,
+                  aspectRatio: undefined,
+                }}
+              />
 
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text___8WrVw
-  //             )}
-  //           >
-  //             {"contact@konceptiva.com"}
-  //           </div>
-  //         </p.Stack>
-  //       ) : null}
-  //       {true ? (
-  //         <p.Stack
-  //           as={"div"}
-  //           hasGap={true}
-  //           className={classNames(projectcss.all, sty.freeBox__qj6Jw)}
-  //         >
-  //           <p.PlasmicImg
-  //             alt={""}
-  //             className={classNames(sty.img__o9LCq)}
-  //             displayHeight={"25px" as const}
-  //             displayMaxHeight={"none" as const}
-  //             displayMaxWidth={"100%" as const}
-  //             displayMinHeight={"0" as const}
-  //             displayMinWidth={"0" as const}
-  //             displayWidth={"25px" as const}
-  //             loading={"lazy" as const}
-  //             src={{
-  //               src: coachIconCompanypngLD3UTzj0G2Lcm,
-  //               fullWidth: 61,
-  //               fullHeight: 62,
-  //               aspectRatio: undefined
-  //             }}
-  //           />
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___8WrVw
+                )}
+              >
+                {'contact@konceptiva.com'}
+              </div>
+            </p.Stack>
+          ) : null}
+          {true ? (
+            <p.Stack
+              as={'div'}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__qj6Jw)}
+            >
+              <p.PlasmicImg
+                alt={''}
+                className={classNames(sty.img__o9LCq)}
+                displayHeight={'25px' as const}
+                displayMaxHeight={'none' as const}
+                displayMaxWidth={'100%' as const}
+                displayMinHeight={'0' as const}
+                displayMinWidth={'0' as const}
+                displayWidth={'25px' as const}
+                loading={'lazy' as const}
+                src={{
+                  src: coachIconCompanypngLD3UTzj0G2Lcm,
+                  fullWidth: 61,
+                  fullHeight: 62,
+                  aspectRatio: undefined,
+                }}
+              />
 
-  //           <div
-  //             className={classNames(
-  //               projectcss.all,
-  //               projectcss.__wab_text,
-  //               sty.text__jeiE2
-  //             )}
-  //           >
-  //             {"11 Oktomvri 24, 1000 Skopje, North Macedonia"}
-  //           </div>
-  //         </p.Stack>
-  //       ) : null}
-  //     </p.Stack>
-  //   </p.Stack>
-  // </div>
-  React.ReactElement | null;
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__jeiE2
+                )}
+              >
+                {'11 Oktomvri 24, 1000 Skopje, North Macedonia'}
+              </div>
+            </p.Stack>
+          ) : null}
+        </p.Stack>
+      </p.Stack>
+    </div>
+  ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {

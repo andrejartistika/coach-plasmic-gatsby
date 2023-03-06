@@ -398,12 +398,18 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {hasVariant(globalVariants, "screen", "mobileOnly") ? (
                   <React.Fragment>
-                    <React.Fragment>{"What is "}</React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#3E7CB1" }}
                     >
-                      {"Coach?"}
+                      {"Coach "}
+                    </span>
+                    <React.Fragment>{""}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#000000" }}
+                    >
+                      {"is here to change the learning game."}
                     </span>
                   </React.Fragment>
                 ) : (
@@ -419,7 +425,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#000000" }}
                     >
-                      {"is here to change the game."}
+                      {"is here to change the learning game."}
                     </span>
                   </React.Fragment>
                 )}
@@ -501,7 +507,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "Coach is a learning platform that helps companies detect and fix knowledge gaps through interactive learning games. \n\nIt offers a unique and engaging learning experience for employees that promotes skill development and knowledge mastery and simplifies content creation for management with easy-to-use features in the admin panel.\n\nThrough science-based methodologies like adaptive learning, spaced repetition and gamification, it guarantees efficient knowledge retention rates."
+                        ? "Deliver bite-sized, interactive learning modules that are tailored to your needs and preferences.  \n\nSay goodbye to boring, ineffective training and hello to a whole new world of learning."
                         : "Deliver bite-sized, interactive learning modules that are tailored to your needs and preferences.  \n\nSay goodbye to boring, ineffective training and hello to a whole new world of learning."}
                     </h1>
                   </div>
@@ -1849,9 +1855,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h2__y1S3S
                 )}
               >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "Who is it for?"
-                  : "Who is it for?"}
+                {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                  "Who is it for?"
+                ) : (
+                  <React.Fragment>
+                    <React.Fragment>{"Discover how "}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#3E7CB1" }}
+                    >
+                      {"Coach"}
+                    </span>
+                    <React.Fragment>{" helps professionals"}</React.Fragment>
+                  </React.Fragment>
+                )}
               </h2>
 
               <div
