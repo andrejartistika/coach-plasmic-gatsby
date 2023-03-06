@@ -33,12 +33,14 @@ export function Header({ isDark, data }) {
         <div className="header--menu-list">
           {data?.map((el) => {
             return (
-              <MenuItem
-                text={el.itemTitle}
-                items={el.subMenuItems}
-                link={el.link}
-                isDark={isDark}
-              />
+              <React.Fragment key={el.itemTitle}>
+                <MenuItem
+                  text={el.itemTitle}
+                  items={el.subMenuItems}
+                  link={el.link}
+                  isDark={isDark}
+                />
+              </React.Fragment>
             );
           })}
         </div>
