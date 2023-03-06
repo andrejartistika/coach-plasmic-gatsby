@@ -44,13 +44,16 @@ export function Header({ isDark, data }) {
             );
           })}
         </div>
-        <div
+        <a
+          style={{ textDecoration: 'none' }}
           className={
             isDark ? 'header--action-button dark' : 'header--action-button'
           }
+          href="https://calendly.com/kalina-t/30min"
+          target="_blank"
         >
-          REQUEST ACCESS
-        </div>
+          GET STARTED
+        </a>
         <img
           className={'header--menu-icon'}
           src={BurgerMenu}
@@ -67,9 +70,11 @@ export function Header({ isDark, data }) {
         }
       >
         {showMenu &&
-          data?.map((el) => {
+          data?.map((el, index) => {
             return (
-              <ResponsiveMenuItem menuItem={el} setShowMenu={setShowMenu} />
+              <React.Fragment key={index}>
+                <ResponsiveMenuItem menuItem={el} setShowMenu={setShowMenu} />
+              </React.Fragment>
             );
           })}
       </div>

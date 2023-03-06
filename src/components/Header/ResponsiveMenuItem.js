@@ -11,7 +11,7 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
   // const navigate = useNavigate();
 
   const [showItems, setShowItems] = useState(false);
-
+  console.log(menuItem);
   return (
     <div
       onClick={() => {
@@ -20,7 +20,19 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
       style={{ cursor: 'pointer' }}
     >
       <div className="header--responsive-menu-item ">
-        <div>{menuItem.itemTitle}</div>
+        {menuItem.link && (
+          <a
+            style={{ textDecoration: 'none', color: '#335075' }}
+            onClick={() => {
+              setShowMenu(false);
+              document.body.style.overflow = 'scroll';
+            }}
+            href={menuItem.link}
+          >
+            {menuItem.itemTitle}
+          </a>
+        )}
+        {!menuItem.link && <div>{menuItem.itemTitle}</div>}
         {menuItem?.subMenuItems?.length > 0 && (
           <img
             className={
@@ -33,24 +45,25 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
         )}
       </div>
       {showItems &&
-        menuItem?.subMenuItems?.map((el) => {
+        menuItem?.subMenuItems?.map((el, index) => {
           return (
-            <div>
+            <div key={index}>
               <div className="header--responsive-menu-item-title">
                 {el.itemTitle}
               </div>
-              {el.items.map((el) => {
+              {el.items.map((el, index) => {
                 return (
-                  <div
+                  <a
+                    key={index}
                     onClick={() => {
                       setShowMenu(false);
                       document.body.style.overflow = 'scroll';
-                      navigate(el.link);
                     }}
                     className="header--responsive-menu-subitem"
+                    href={el.link}
                   >
                     {el.title}
-                  </div>
+                  </a>
                 );
               })}
             </div>

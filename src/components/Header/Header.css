@@ -183,6 +183,8 @@
   padding: 10px 0 15px 20%;
   cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
+  display: block;
 }
 
 .header--menu-caret {
