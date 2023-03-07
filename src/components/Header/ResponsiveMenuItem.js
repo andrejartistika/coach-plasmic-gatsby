@@ -11,7 +11,6 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
   // const navigate = useNavigate();
 
   const [showItems, setShowItems] = useState(false);
-  console.log(menuItem);
   return (
     <div
       onClick={() => {
