@@ -22,7 +22,7 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
     },
   });
 
-  PLASMIC.substituteComponent(CustomSlider, 'Slider');
+  // PLASMIC.substituteComponent(CustomSlider, 'Slider');
 
   // PLASMIC.registerComponent(CustomSlider, {
   //   name: 'CustomSlider',
