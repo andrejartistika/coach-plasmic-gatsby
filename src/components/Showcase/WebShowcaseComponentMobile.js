@@ -1,28 +1,27 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-import "./ShowcaseComponent.css";
-import Video from "./Video/Video";
-import PlayIcon from "assets/icons/web-icon-play.svg";
-import ImproveIcon from "assets/icons/web-icon-improve.svg";
-import ReinforceIcon from "assets/icons/web-icon-reinforce.svg";
-import RewardsIcon from "assets/icons/web-icon-rewards.svg";
-import TrackIcon from "assets/icons/web-icon-track.svg";
+import './ShowcaseComponent.css';
+import Video from './Video/Video';
+import PlayIcon from 'assets/icons/web-icon-play.svg';
+import ImproveIcon from 'assets/icons/web-icon-improve.svg';
+import ReinforceIcon from 'assets/icons/web-icon-reinforce.svg';
+import RewardsIcon from 'assets/icons/web-icon-rewards.svg';
+import TrackIcon from 'assets/icons/web-icon-track.svg';
 
-import PlayIconSelected from "assets/icons/web-icon-play-selected.svg";
-import ImproveIconSelected from "assets/icons/web-icon-improve-selected.svg";
-import ReinforceIconSelected from "assets/icons/web-icon-reinforce-selected.svg";
-import RewardsIconSelected from "assets/icons/web-icon-rewards-selected.svg";
-import TrackIconSelected from "assets/icons/web-icon-track-selected.svg";
+import PlayIconSelected from 'assets/icons/web-icon-play-selected.svg';
+import ImproveIconSelected from 'assets/icons/web-icon-improve-selected.svg';
+import ReinforceIconSelected from 'assets/icons/web-icon-reinforce-selected.svg';
+import TrackIconSelected from 'assets/icons/web-icon-track-selected.svg';
 
-import Analytics from "assets/videos/admin-analytics.mp4";
-import AssignTraining from "assets/videos/admin-assigntraining.mp4";
-import CreateContent from "assets/videos/admin-createcontent.mp4";
-import Feedback from "assets/videos/admin-feedback.mp4";
-import Organize from "assets/videos/admin-organize.mp4";
+import Analytics from 'assets/videos/admin-analytics.mp4';
+import AssignTraining from 'assets/videos/admin-assigntraining.mp4';
+import CreateContent from 'assets/videos/admin-createcontent.mp4';
+import Feedback from 'assets/videos/admin-feedback.mp4';
+import Organize from 'assets/videos/admin-organize.mp4';
 
-import { ShowcaseItemMinimized } from "./ShowcaseItem/ShowcaseItemMinimized";
-import { appShowcaseData, webShowcaseData } from "constants/app_showcase";
-import VideoMinimized from "./Video/VideoMinimized";
+import { ShowcaseItemMinimized } from './ShowcaseItem/ShowcaseItemMinimized';
+import { appShowcaseData, webShowcaseData } from 'constants/app_showcase';
+import VideoMinimized from './Video/VideoMinimized';
 
 export function WebShowcaseComponentMobile({ isLight }) {
   const [index, setIndex] = useState(0);

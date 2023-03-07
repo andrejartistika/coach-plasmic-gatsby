@@ -23,6 +23,7 @@
     "@plasmicpkgs/antd": "^2.0.20",
     "@plasmicpkgs/plasmic-nav": "^0.0.75",
     "@plasmicpkgs/react-awesome-reveal": "^3.8.105",
+    "@types/react-slick": "^0.23.10",
     "antd": "^5.2.0",
     "gatsby": "^5.6.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
