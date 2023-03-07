@@ -5,9 +5,9 @@ import Logo from 'assets/icons/coach-logo.svg';
 import LogoDarkMode from 'assets/icons/coach-logo-dark-mode.svg';
 import BurgerMenu from 'assets/icons/menu-burger.svg';
 import { navigate } from 'gatsby';
-
+import { Script } from 'gatsby';
 import './Header.css';
-// import { useNavigate } from 'react-router-dom';
+
 import ResponsiveMenuItem from './ResponsiveMenuItem';
 
 export function Header({ isDark, data }) {
@@ -28,6 +28,28 @@ export function Header({ isDark, data }) {
             navigate('/');
             document.body.style.overflow = 'scroll';
             setShowMenu(false);
+          }}
+        />
+        <Script
+          id="first-unique-id"
+          key="plasmic-hmr"
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+        if (typeof window !== "undefined" && /\\/plasmic-host\\/?$/.test(window.location.pathname)) {
+          const RealEventSource = window.EventSource;
+          window.EventSource = function(url, config) {
+            if (/[^a-zA-Z]hmr($|[^a-zA-Z])/.test(url)) {
+              console.warn("Plasmic: disabled EventSource request for", url);
+              return {
+                onerror() {}, onmessage() {}, onopen() {}, close() {}
+              };
+            } else {
+              return new RealEventSource(url, config);
+            }
+          }
+        }
+      `,
           }}
         />
         <div className="header--menu-list">
@@ -62,6 +84,7 @@ export function Header({ isDark, data }) {
           width={20}
         />
       </div>
+
       <div
         className={
           showMenu
