@@ -141,6 +141,12 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
         description: 'Cross-fade between slides',
         defaultValueHint: false,
       },
+      centerMode: {
+        displayName: 'centerMode',
+        type: 'boolean',
+        description: 'Center mode',
+        defaultValueHint: false,
+      },
       focusOnSelect: {
         displayName: 'Focus On Select',
         type: 'boolean',
