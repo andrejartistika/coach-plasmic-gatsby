@@ -35,7 +35,7 @@
   max-width: 100%;
   background: linear-gradient(180deg, #f5f6f6 29%, #ffffff 90%);
   min-width: 0;
-  padding: 60px 0px 0px;
+  padding: 60px 35px 0px;
 }
 .hero > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -496,7 +496,7 @@
   max-width: 100%;
   background: var(--token-JNoyw_xuvedGqk);
   min-width: 0;
-  padding: 10px 0px 126px;
+  padding: 10px 35px 126px;
 }
 @media (max-width: 1024px) {
   .section2 {
@@ -1337,7 +1337,7 @@
   max-width: 100%;
   z-index: 1;
   min-width: 0;
-  padding: 8px 0px;
+  padding: 8px 35px;
 }
 @media (max-width: 1024px) {
   .freeBox__iDgbd {
