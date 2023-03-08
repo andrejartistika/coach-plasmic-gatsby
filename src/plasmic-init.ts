@@ -147,6 +147,12 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
         description: 'Center mode',
         defaultValueHint: false,
       },
+      centerPadding: {
+        displayName: 'centerPadding',
+        type: 'string',
+        description: 'Center padding',
+        defaultValueHint: '30px',
+      },
       focusOnSelect: {
         displayName: 'Focus On Select',
         type: 'boolean',
