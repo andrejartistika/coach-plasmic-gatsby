@@ -6,15 +6,12 @@ export default function CustomSlider({ children, ...props }) {
 
   const handleOnItemClick = useCallback(
     (e) => {
-      console.log('handleOnItemClick');
       if (dragging) {
         e.stopPropagation();
         e.preventDefault();
         setDragging(false);
         var anchorTags = document.getElementsByTagName('a');
-
         var anchorsList = Array.prototype.slice.call(anchorTags);
-
         anchorsList.forEach((el) => {
           el.style.pointerEvents = 'auto';
         });
@@ -27,28 +24,21 @@ export default function CustomSlider({ children, ...props }) {
     setDragging(true);
   }, [setDragging]);
 
-  console.log('is dragging', dragging);
-
   useEffect(() => {
-    // console.log(document.getElementsByTagName('a'));
     var anchorTags = document.getElementsByTagName('a');
-
     var anchorsList = Array.prototype.slice.call(anchorTags);
-
     anchorsList.forEach((el) => {
       el.style.pointerEvents = 'none';
     });
-
-    // for (let elem in anchorsList) {
-    //   console.log(elem);
-    // }
   }, [dragging]);
 
   return (
     <Slider
       swipeEvent={(event) => {
-        console.log(event);
         setDragging(true);
+      }}
+      afterChange={() => {
+        setDragging(false);
       }}
       onSwipe={handleSwiped}
       {...props}
