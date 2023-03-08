@@ -81,6 +81,16 @@
       }
     },
     {
+      "name": "UnnamedStyleToken 4",
+      "type": "spacing",
+      "value": "1px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "n7JM2c9rKsJq2MtgHpQAyH",
+        "id": "ChpkuN9PP"
+      }
+    },
+    {
       "name": "White",
       "type": "color",
       "value": "#FFFFFFCC",

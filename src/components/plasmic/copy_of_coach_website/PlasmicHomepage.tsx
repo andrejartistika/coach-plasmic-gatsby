@@ -41,8 +41,9 @@ import ReusableHeader from "../../ReusableHeader"; // plasmic-import: aZG1o9ts_1
 import Button from "../../Button"; // plasmic-import: HFQysdji1yD9Yg/component
 import { ShowcaseComponentMobile } from "components/Showcase/ShowcaseComponentMobile"; // plasmic-import: rWm0V-GKKDqfP_/codeComponent
 import { ShowcaseComponent } from "components/Showcase/ShowcaseComponent"; // plasmic-import: 3rNeoH1I_fqFT8/codeComponent
-import Slider from "react-slick"; // plasmic-import: HOQUyOpClJ/codeComponent
+import CustomSlider from "components/CustomSlider/CustomSlider"; // plasmic-import: hdy57beJQC/codeComponent
 import IndustryCard from "../../IndustryCard"; // plasmic-import: GAiHy1uvAVjk52/component
+import Slider from "react-slick"; // plasmic-import: HOQUyOpClJ/codeComponent
 import Footer from "../../Footer"; // plasmic-import: yHbgPlkcGh0BHH/component
 
 import { useScreenVariants as useScreenVariantsgyi9F2CGadx1Xj } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: GYI9F2cGadx1XJ/globalVariant
@@ -112,6 +113,7 @@ export type PlasmicHomepage__OverridesType = {
   section13?: p.Flex<"div">;
   showcaseComponent?: p.Flex<typeof ShowcaseComponent>;
   section6?: p.Flex<"div">;
+  customSlider?: p.Flex<typeof CustomSlider>;
   section7?: p.Flex<"div">;
   section8?: p.Flex<"div">;
   ctaBlog?: p.Flex<"div">;
@@ -1643,172 +1645,416 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.Stack>
 
             <div className={classNames(projectcss.all, sty.freeBox__uy5Nm)}>
-              <Slider
-                adaptiveHeight={true}
-                arrows={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                }
-                autoplay={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : false
-                }
-                centerMode={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : false
-                }
-                centerPadding={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("50px" as const)
-                    : ("30px" as const)
-                }
-                className={classNames("__wab_instance", sty.slider__tkxy0)}
-                dots={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? false
-                    : true
-                }
-                draggable={true}
-                infinite={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : undefined
-                }
-                rows={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? (1 as const)
-                    : (1 as const)
-                }
-                rtl={false}
-                slidesPerRow={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? (1 as const)
-                    : (5 as const)
-                }
-                slidesToScroll={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? (5 as const)
-                    : (1 as const)
-                }
-                slidesToShow={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? (1 as const)
-                    : (1 as const)
-                }
-                swipeToSlide={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : false
-                }
-                variableWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : false
-                }
-                vertical={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? false
-                    : undefined
-                }
-              >
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__okU36
-                  )}
-                  component={Link}
-                  href={`/industry-consumer-electronics`}
-                  platform={"gatsby"}
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+              ) ? (
+                <CustomSlider
+                  data-plasmic-name={"customSlider"}
+                  data-plasmic-override={overrides.customSlider}
+                  arrows={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : false
+                  }
+                  autoplay={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
+                  }
+                  autoplaySpeed={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (3000 as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? (3000 as const)
+                      : (500 as const)
+                  }
+                  centerMode={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : undefined
+                  }
+                  centerPadding={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("50px" as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? ("30px" as const)
+                      : undefined
+                  }
+                  className={classNames("__wab_instance", sty.customSlider)}
+                  dotSlotWrapperStyle={{}}
+                  fade={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : undefined
+                  }
+                  infinite={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
+                  }
+                  initialSlide={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (0 as const)
+                      : (0 as const)
+                  }
+                  nextArrow={null}
+                  pauseOnFocus={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : undefined
+                  }
+                  prevArrow={null}
+                  rows={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? (1 as const)
+                      : undefined
+                  }
+                  slideWrapperStyle={{}}
+                  sliderWrapperStyle={{}}
+                  slidesPerRow={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (1 as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? (1 as const)
+                      : (5 as const)
+                  }
+                  slidesToScroll={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (5 as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? (1 as const)
+                      : undefined
+                  }
+                  slidesToShow={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (1 as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? (1 as const)
+                      : undefined
+                  }
+                  swipeToSlide={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : undefined
+                  }
+                  touchThreshold={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (5 as const)
+                      : undefined
+                  }
+                  useCSS={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : undefined
+                  }
+                  variableWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : undefined
+                  }
                 >
-                  <IndustryCard
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__z03A
+                      )}
+                      component={Link}
+                      href={`/industry-consumer-electronics`}
+                      platform={"gatsby"}
+                    >
+                      <IndustryCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.industryCard__dzLUc
+                        )}
+                        consumerElectronics={true}
+                      />
+                    </p.PlasmicLink>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__mZb7O
+                      )}
+                      component={Link}
+                      href={`/industry-manufacturing`}
+                      platform={"gatsby"}
+                    >
+                      <IndustryCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.industryCard__bgJxz
+                        )}
+                        manufacturing={true}
+                      />
+                    </p.PlasmicLink>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__jtxGk
+                      )}
+                      component={Link}
+                      href={`/industry-pharmaceuticals`}
+                      platform={"gatsby"}
+                    >
+                      <IndustryCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.industryCard__jd7Kd
+                        )}
+                        pharmaceuticals={true}
+                      />
+                    </p.PlasmicLink>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__gmD7P
+                      )}
+                      component={Link}
+                      href={`/industry-telecommunication`}
+                      platform={"gatsby"}
+                    >
+                      <IndustryCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.industryCard__voXok
+                        )}
+                        telecom={true}
+                      />
+                    </p.PlasmicLink>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__tg2G0
+                      )}
+                      component={Link}
+                      href={`/industry-luxury-goods`}
+                      platform={"gatsby"}
+                    >
+                      <IndustryCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.industryCard__lmS7U
+                        )}
+                        luxuryGoods={true}
+                      />
+                    </p.PlasmicLink>
+                  ) : null}
+                </CustomSlider>
+              ) : null}
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+              ) ? (
+                <Slider
+                  adaptiveHeight={true}
+                  arrows={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  }
+                  autoplay={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : false
+                  }
+                  centerMode={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : false
+                  }
+                  centerPadding={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("150px" as const)
+                      : ("30px" as const)
+                  }
+                  className={classNames("__wab_instance", sty.slider__tkxy0)}
+                  dots={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : true
+                  }
+                  draggable={true}
+                  infinite={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : undefined
+                  }
+                  rows={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (1 as const)
+                      : (1 as const)
+                  }
+                  rtl={false}
+                  slidesPerRow={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (1 as const)
+                      : (5 as const)
+                  }
+                  slidesToScroll={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (5 as const)
+                      : (1 as const)
+                  }
+                  slidesToShow={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (1 as const)
+                      : (1 as const)
+                  }
+                  swipeToSlide={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : false
+                  }
+                  variableWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : false
+                  }
+                  vertical={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : undefined
+                  }
+                >
+                  <p.PlasmicLink
                     className={classNames(
-                      "__wab_instance",
-                      sty.industryCard__bs8Ry
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__okU36
                     )}
-                    consumerElectronics={true}
-                  />
-                </p.PlasmicLink>
+                    component={Link}
+                    href={`/industry-consumer-electronics`}
+                    platform={"gatsby"}
+                  >
+                    <IndustryCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.industryCard__bs8Ry
+                      )}
+                      consumerElectronics={true}
+                    />
+                  </p.PlasmicLink>
 
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__jaMn
-                  )}
-                  component={Link}
-                  href={`/industry-manufacturing`}
-                  platform={"gatsby"}
-                >
-                  <IndustryCard
+                  <p.PlasmicLink
                     className={classNames(
-                      "__wab_instance",
-                      sty.industryCard__qrLfI
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__jaMn
                     )}
-                    manufacturing={true}
-                  />
-                </p.PlasmicLink>
+                    component={Link}
+                    href={`/industry-manufacturing`}
+                    platform={"gatsby"}
+                  >
+                    <IndustryCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.industryCard__qrLfI
+                      )}
+                      manufacturing={true}
+                    />
+                  </p.PlasmicLink>
 
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__uMR
-                  )}
-                  component={Link}
-                  href={`/industry-pharmaceuticals`}
-                  platform={"gatsby"}
-                >
-                  <IndustryCard
+                  <p.PlasmicLink
                     className={classNames(
-                      "__wab_instance",
-                      sty.industryCard__psQ0
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__uMR
                     )}
-                    pharmaceuticals={true}
-                  />
-                </p.PlasmicLink>
+                    component={Link}
+                    href={`/industry-pharmaceuticals`}
+                    platform={"gatsby"}
+                  >
+                    <IndustryCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.industryCard__psQ0
+                      )}
+                      pharmaceuticals={true}
+                    />
+                  </p.PlasmicLink>
 
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__yoIDl
-                  )}
-                  component={Link}
-                  href={`/industry-telecommunication`}
-                  platform={"gatsby"}
-                >
-                  <IndustryCard
+                  <p.PlasmicLink
                     className={classNames(
-                      "__wab_instance",
-                      sty.industryCard__cXcFp
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__yoIDl
                     )}
-                    telecom={true}
-                  />
-                </p.PlasmicLink>
+                    component={Link}
+                    href={`/industry-telecommunication`}
+                    platform={"gatsby"}
+                  >
+                    <IndustryCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.industryCard__cXcFp
+                      )}
+                      telecom={true}
+                    />
+                  </p.PlasmicLink>
 
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__rLcen
-                  )}
-                  component={Link}
-                  href={`/industry-luxury-goods`}
-                  platform={"gatsby"}
-                >
-                  <IndustryCard
+                  <p.PlasmicLink
                     className={classNames(
-                      "__wab_instance",
-                      sty.industryCard__kH9Ly
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__rLcen
                     )}
-                    luxuryGoods={true}
-                  />
-                </p.PlasmicLink>
-              </Slider>
+                    component={Link}
+                    href={`/industry-luxury-goods`}
+                    platform={"gatsby"}
+                  >
+                    <IndustryCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.industryCard__kH9Ly
+                      )}
+                      luxuryGoods={true}
+                    />
+                  </p.PlasmicLink>
+                </Slider>
+              ) : null}
             </div>
           </p.Stack>
 
@@ -2523,6 +2769,7 @@ const PlasmicDescendants = {
     "section13",
     "showcaseComponent",
     "section6",
+    "customSlider",
     "section7",
     "section8",
     "ctaBlog",
@@ -2554,7 +2801,8 @@ const PlasmicDescendants = {
   featuresButton: ["featuresButton"],
   section13: ["section13", "showcaseComponent"],
   showcaseComponent: ["showcaseComponent"],
-  section6: ["section6"],
+  section6: ["section6", "customSlider"],
+  customSlider: ["customSlider"],
   section7: ["section7"],
   section8: ["section8"],
   ctaBlog: ["ctaBlog", "section9"],
@@ -2584,6 +2832,7 @@ type NodeDefaultElementType = {
   section13: "div";
   showcaseComponent: typeof ShowcaseComponent;
   section6: "div";
+  customSlider: typeof CustomSlider;
   section7: "div";
   section8: "div";
   ctaBlog: "div";
@@ -2670,6 +2919,7 @@ export const PlasmicHomepage = Object.assign(
     section13: makeNodeComponent("section13"),
     showcaseComponent: makeNodeComponent("showcaseComponent"),
     section6: makeNodeComponent("section6"),
+    customSlider: makeNodeComponent("customSlider"),
     section7: makeNodeComponent("section7"),
     section8: makeNodeComponent("section8"),
     ctaBlog: makeNodeComponent("ctaBlog"),

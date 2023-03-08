@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import Slider from 'react-slick';
 import './CustomSlider.css';
-export function CustomSlider({ children, ...props }) {
+export default function CustomSlider({ children, ...props }) {
   const [dragging, setDragging] = useState(false);
 
   const handleOnItemClick = useCallback(

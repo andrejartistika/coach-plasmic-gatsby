@@ -1331,6 +1331,11 @@
           "id": "NhD8cpyPGumD30",
           "name": "Header",
           "componentImportPath": "components/Header/Header"
+        },
+        {
+          "id": "hdy57beJQC",
+          "name": "CustomSlider",
+          "componentImportPath": "components/CustomSlider/CustomSlider"
         }
       ]
     }
