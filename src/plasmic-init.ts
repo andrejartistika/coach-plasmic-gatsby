@@ -5,7 +5,7 @@ import { WebShowcaseComponent } from './components/Showcase/WebShowcaseComponent
 import { ShowcaseComponentMobile } from './components/Showcase/ShowcaseComponentMobile';
 import { WebShowcaseComponentMobile } from './components/Showcase/WebShowcaseComponentMobile';
 
-import { CustomSlider } from 'components/CustomSlider/CustomSlider';
+import CustomSlider from 'components/CustomSlider/CustomSlider';
 
 export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
   const PLASMIC = initPlasmicLoader(plasmicOptions);
