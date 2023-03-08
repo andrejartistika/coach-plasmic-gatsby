@@ -43,7 +43,6 @@ import { ShowcaseComponentMobile } from "components/Showcase/ShowcaseComponentMo
 import { ShowcaseComponent } from "components/Showcase/ShowcaseComponent"; // plasmic-import: 3rNeoH1I_fqFT8/codeComponent
 import CustomSlider from "components/CustomSlider/CustomSlider"; // plasmic-import: hdy57beJQC/codeComponent
 import IndustryCard from "../../IndustryCard"; // plasmic-import: GAiHy1uvAVjk52/component
-import Slider from "react-slick"; // plasmic-import: HOQUyOpClJ/codeComponent
 import Footer from "../../Footer"; // plasmic-import: yHbgPlkcGh0BHH/component
 
 import { useScreenVariants as useScreenVariantsgyi9F2CGadx1Xj } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: GYI9F2cGadx1XJ/globalVariant
@@ -113,9 +112,7 @@ export type PlasmicHomepage__OverridesType = {
   section13?: p.Flex<"div">;
   showcaseComponent?: p.Flex<typeof ShowcaseComponent>;
   section6?: p.Flex<"div">;
-  customSlider?: p.Flex<typeof CustomSlider>;
   section7?: p.Flex<"div">;
-  slider?: p.Flex<typeof Slider>;
   section8?: p.Flex<"div">;
   ctaBlog?: p.Flex<"div">;
   section9?: p.Flex<"div">;
@@ -1650,8 +1647,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
               ) ? (
                 <CustomSlider
-                  data-plasmic-name={"customSlider"}
-                  data-plasmic-override={overrides.customSlider}
                   arrows={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? false
@@ -1685,7 +1680,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? ("30px" as const)
                       : undefined
                   }
-                  className={classNames("__wab_instance", sty.customSlider)}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.customSlider__vfzs
+                  )}
                   dotSlotWrapperStyle={{}}
                   dots={
                     hasVariant(globalVariants, "screen", "tablet")
@@ -1977,46 +1975,61 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </p.Stack>
 
-            <Slider
-              data-plasmic-name={"slider"}
-              data-plasmic-override={overrides.slider}
-              adaptiveHeight={true}
-              arrows={
-                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-              }
+            <CustomSlider
+              arrows={false}
               autoplay={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? true
-                  : false
-              }
-              centerMode={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? true
-                  : false
-              }
-              centerPadding={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("50px" as const)
-                  : ("30px" as const)
-              }
-              className={classNames("__wab_instance", sty.slider)}
-              dots={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? false
-                  : true
-              }
-              draggable={true}
-              infinite={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? true
                   : undefined
               }
-              rows={
+              centerMode={
                 hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? (1 as const)
-                  : (1 as const)
+                  ? true
+                  : undefined
               }
-              rtl={false}
+              centerPadding={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? ("50px" as const)
+                  : undefined
+              }
+              className={classNames("__wab_instance", sty.customSlider__pAzs5)}
+              dotSlotWrapperStyle={{}}
+              infinite={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? true
+                  : false
+              }
+              nextArrow={
+                <button
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.button,
+                    projectcss.__wab_text,
+                    sty.button__hCcMa
+                  )}
+                >
+                  {"Next"}
+                </button>
+              }
+              pauseOnFocus={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? true
+                  : undefined
+              }
+              prevArrow={
+                <button
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.button,
+                    projectcss.__wab_text,
+                    sty.button__vnYxp
+                  )}
+                >
+                  {"Prev"}
+                </button>
+              }
+              slideWrapperStyle={{}}
+              sliderWrapperStyle={{}}
               slidesPerRow={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? (1 as const)
@@ -2025,26 +2038,16 @@ function PlasmicHomepage__RenderFunc(props: {
               slidesToScroll={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? (4 as const)
-                  : (1 as const)
-              }
-              slidesToShow={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? (1 as const)
-                  : (1 as const)
+                  : undefined
               }
               swipeToSlide={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? true
-                  : false
+                  : undefined
               }
               variableWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? true
-                  : false
-              }
-              vertical={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? false
                   : undefined
               }
             >
@@ -2052,7 +2055,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__hjDoH,
+                  sty.link__um7Ql,
                   "" as const
                 )}
                 component={Link}
@@ -2062,12 +2065,12 @@ function PlasmicHomepage__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___11OBm)}
+                  className={classNames(projectcss.all, sty.freeBox___5TmtN)}
                   role={"" as const}
                 >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__rAmwF)}
+                    className={classNames(sty.img__ho24F)}
                     displayHeight={"auto" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"90%" as const}
@@ -2087,7 +2090,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__d9WbS
+                      sty.text__cxVn1
                     )}
                   >
                     <React.Fragment>
@@ -2108,7 +2111,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__vXhgF
+                  sty.link__iyAW
                 )}
                 component={Link}
                 href={`/who-is-it-for-ceos`}
@@ -2117,11 +2120,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__g5GzA)}
+                  className={classNames(projectcss.all, sty.freeBox__oZ9Zb)}
                 >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img___1Cm3Q)}
+                    className={classNames(sty.img__ggIN)}
                     displayHeight={"auto" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"90%" as const}
@@ -2141,7 +2144,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__xm4Ff
+                      sty.text___16WCf
                     )}
                   >
                     <React.Fragment>
@@ -2161,7 +2164,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__qmgPk
+                  sty.link__brS2C
                 )}
                 component={Link}
                 href={`/who-is-it-for-instructional-designers`}
@@ -2170,11 +2173,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__scPG)}
+                  className={classNames(projectcss.all, sty.freeBox__htihn)}
                 >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__cbIng)}
+                    className={classNames(sty.img__mFwzI)}
                     displayHeight={"auto" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"90%" as const}
@@ -2194,7 +2197,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__y5Lrc
+                      sty.text___5V4Hq
                     )}
                   >
                     <React.Fragment>
@@ -2214,7 +2217,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__jyojq
+                  sty.link__k7H13
                 )}
                 component={Link}
                 href={`/who-is-it-for-employees`}
@@ -2223,11 +2226,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__cnBr4)}
+                  className={classNames(projectcss.all, sty.freeBox__nPvQd)}
                 >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__hqYc)}
+                    className={classNames(sty.img__fFyel)}
                     displayHeight={"auto" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"90%" as const}
@@ -2247,7 +2250,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__mKowd
+                      sty.text__bAqSv
                     )}
                   >
                     <React.Fragment>
@@ -2262,7 +2265,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </p.Stack>
               </p.PlasmicLink>
-            </Slider>
+            </CustomSlider>
           </p.Stack>
 
           <p.Stack
@@ -2629,9 +2632,7 @@ const PlasmicDescendants = {
     "section13",
     "showcaseComponent",
     "section6",
-    "customSlider",
     "section7",
-    "slider",
     "section8",
     "ctaBlog",
     "section9",
@@ -2662,10 +2663,8 @@ const PlasmicDescendants = {
   featuresButton: ["featuresButton"],
   section13: ["section13", "showcaseComponent"],
   showcaseComponent: ["showcaseComponent"],
-  section6: ["section6", "customSlider"],
-  customSlider: ["customSlider"],
-  section7: ["section7", "slider"],
-  slider: ["slider"],
+  section6: ["section6"],
+  section7: ["section7"],
   section8: ["section8"],
   ctaBlog: ["ctaBlog", "section9"],
   section9: ["section9"],
@@ -2694,9 +2693,7 @@ type NodeDefaultElementType = {
   section13: "div";
   showcaseComponent: typeof ShowcaseComponent;
   section6: "div";
-  customSlider: typeof CustomSlider;
   section7: "div";
-  slider: typeof Slider;
   section8: "div";
   ctaBlog: "div";
   section9: "div";
@@ -2782,9 +2779,7 @@ export const PlasmicHomepage = Object.assign(
     section13: makeNodeComponent("section13"),
     showcaseComponent: makeNodeComponent("showcaseComponent"),
     section6: makeNodeComponent("section6"),
-    customSlider: makeNodeComponent("customSlider"),
     section7: makeNodeComponent("section7"),
-    slider: makeNodeComponent("slider"),
     section8: makeNodeComponent("section8"),
     ctaBlog: makeNodeComponent("ctaBlog"),
     section9: makeNodeComponent("section9"),
