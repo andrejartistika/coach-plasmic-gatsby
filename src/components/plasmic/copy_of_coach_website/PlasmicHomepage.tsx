@@ -115,6 +115,7 @@ export type PlasmicHomepage__OverridesType = {
   section6?: p.Flex<"div">;
   customSlider?: p.Flex<typeof CustomSlider>;
   section7?: p.Flex<"div">;
+  slider?: p.Flex<typeof Slider>;
   section8?: p.Flex<"div">;
   ctaBlog?: p.Flex<"div">;
   section9?: p.Flex<"div">;
@@ -1686,8 +1687,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   }
                   className={classNames("__wab_instance", sty.customSlider)}
                   dotSlotWrapperStyle={{}}
+                  dots={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? false
+                      : undefined
+                  }
                   fade={
                     hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? false
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? false
+                      : undefined
+                  }
+                  focusOnSelect={
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? false
                       : undefined
                   }
@@ -1707,14 +1720,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   pauseOnFocus={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? false
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
                       : undefined
+                  }
+                  pauseOnHover={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
                   }
                   prevArrow={null}
-                  rows={
-                    hasVariant(globalVariants, "screen", "tablet")
-                      ? (1 as const)
-                      : undefined
-                  }
+                  rows={1 as const}
                   slideWrapperStyle={{}}
                   sliderWrapperStyle={{}}
                   slidesPerRow={
@@ -1727,16 +1743,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   slidesToScroll={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? (5 as const)
-                      : hasVariant(globalVariants, "screen", "tablet")
-                      ? (1 as const)
-                      : undefined
+                      : (1 as const)
                   }
                   slidesToShow={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? (1 as const)
-                      : hasVariant(globalVariants, "screen", "tablet")
-                      ? (1 as const)
-                      : undefined
+                      : (1 as const)
+                  }
+                  swipe={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
                   }
                   swipeToSlide={
                     hasVariant(globalVariants, "screen", "mobileOnly")
@@ -1745,22 +1762,29 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? true
                       : undefined
                   }
+                  touchMove={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
+                  }
                   touchThreshold={
                     hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? (5 as const)
+                      : hasVariant(globalVariants, "screen", "tablet")
                       ? (5 as const)
                       : undefined
                   }
                   useCSS={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? true
-                      : undefined
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? true
+                      : false
                   }
                   variableWidth={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? true
-                      : hasVariant(globalVariants, "screen", "tablet")
-                      ? true
-                      : undefined
+                      : true
                   }
                 >
                   {(
@@ -1850,13 +1874,15 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/industry-telecommunication`}
                       platform={"gatsby"}
                     >
-                      <IndustryCard
-                        className={classNames(
-                          "__wab_instance",
-                          sty.industryCard__voXok
-                        )}
-                        telecom={true}
-                      />
+                      {true ? (
+                        <IndustryCard
+                          className={classNames(
+                            "__wab_instance",
+                            sty.industryCard__voXok
+                          )}
+                          telecom={true}
+                        />
+                      ) : null}
                     </p.PlasmicLink>
                   ) : null}
                   {(
@@ -1874,186 +1900,18 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/industry-luxury-goods`}
                       platform={"gatsby"}
                     >
-                      <IndustryCard
-                        className={classNames(
-                          "__wab_instance",
-                          sty.industryCard__lmS7U
-                        )}
-                        luxuryGoods={true}
-                      />
+                      {true ? (
+                        <IndustryCard
+                          className={classNames(
+                            "__wab_instance",
+                            sty.industryCard__lmS7U
+                          )}
+                          luxuryGoods={true}
+                        />
+                      ) : null}
                     </p.PlasmicLink>
                   ) : null}
                 </CustomSlider>
-              ) : null}
-              {(
-                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-              ) ? (
-                <Slider
-                  adaptiveHeight={true}
-                  arrows={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : true
-                  }
-                  autoplay={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : false
-                  }
-                  centerMode={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : false
-                  }
-                  centerPadding={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? ("150px" as const)
-                      : ("30px" as const)
-                  }
-                  className={classNames("__wab_instance", sty.slider__tkxy0)}
-                  dots={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? false
-                      : true
-                  }
-                  draggable={true}
-                  infinite={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : undefined
-                  }
-                  rows={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? (1 as const)
-                      : (1 as const)
-                  }
-                  rtl={false}
-                  slidesPerRow={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? (1 as const)
-                      : (5 as const)
-                  }
-                  slidesToScroll={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? (5 as const)
-                      : (1 as const)
-                  }
-                  slidesToShow={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? (1 as const)
-                      : (1 as const)
-                  }
-                  swipeToSlide={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : false
-                  }
-                  variableWidth={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : false
-                  }
-                  vertical={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? false
-                      : undefined
-                  }
-                >
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__okU36
-                    )}
-                    component={Link}
-                    href={`/industry-consumer-electronics`}
-                    platform={"gatsby"}
-                  >
-                    <IndustryCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.industryCard__bs8Ry
-                      )}
-                      consumerElectronics={true}
-                    />
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__jaMn
-                    )}
-                    component={Link}
-                    href={`/industry-manufacturing`}
-                    platform={"gatsby"}
-                  >
-                    <IndustryCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.industryCard__qrLfI
-                      )}
-                      manufacturing={true}
-                    />
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__uMR
-                    )}
-                    component={Link}
-                    href={`/industry-pharmaceuticals`}
-                    platform={"gatsby"}
-                  >
-                    <IndustryCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.industryCard__psQ0
-                      )}
-                      pharmaceuticals={true}
-                    />
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__yoIDl
-                    )}
-                    component={Link}
-                    href={`/industry-telecommunication`}
-                    platform={"gatsby"}
-                  >
-                    <IndustryCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.industryCard__cXcFp
-                      )}
-                      telecom={true}
-                    />
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__rLcen
-                    )}
-                    component={Link}
-                    href={`/industry-luxury-goods`}
-                    platform={"gatsby"}
-                  >
-                    <IndustryCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.industryCard__kH9Ly
-                      )}
-                      luxuryGoods={true}
-                    />
-                  </p.PlasmicLink>
-                </Slider>
               ) : null}
             </div>
           </p.Stack>
@@ -2120,6 +1978,8 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.Stack>
 
             <Slider
+              data-plasmic-name={"slider"}
+              data-plasmic-override={overrides.slider}
               adaptiveHeight={true}
               arrows={
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -2139,7 +1999,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   ? ("50px" as const)
                   : ("30px" as const)
               }
-              className={classNames("__wab_instance", sty.slider__rBg8W)}
+              className={classNames("__wab_instance", sty.slider)}
               dots={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? false
@@ -2771,6 +2631,7 @@ const PlasmicDescendants = {
     "section6",
     "customSlider",
     "section7",
+    "slider",
     "section8",
     "ctaBlog",
     "section9",
@@ -2803,7 +2664,8 @@ const PlasmicDescendants = {
   showcaseComponent: ["showcaseComponent"],
   section6: ["section6", "customSlider"],
   customSlider: ["customSlider"],
-  section7: ["section7"],
+  section7: ["section7", "slider"],
+  slider: ["slider"],
   section8: ["section8"],
   ctaBlog: ["ctaBlog", "section9"],
   section9: ["section9"],
@@ -2834,6 +2696,7 @@ type NodeDefaultElementType = {
   section6: "div";
   customSlider: typeof CustomSlider;
   section7: "div";
+  slider: typeof Slider;
   section8: "div";
   ctaBlog: "div";
   section9: "div";
@@ -2921,6 +2784,7 @@ export const PlasmicHomepage = Object.assign(
     section6: makeNodeComponent("section6"),
     customSlider: makeNodeComponent("customSlider"),
     section7: makeNodeComponent("section7"),
+    slider: makeNodeComponent("slider"),
     section8: makeNodeComponent("section8"),
     ctaBlog: makeNodeComponent("ctaBlog"),
     section9: makeNodeComponent("section9"),

@@ -3388,6 +3388,7 @@
 }
 .industryCard__voXok:global(.__wab_instance) {
   max-width: 100%;
+  display: flex;
 }
 .link__tg2G0 {
   position: relative;
@@ -3399,74 +3400,7 @@
 }
 .industryCard__lmS7U:global(.__wab_instance) {
   max-width: 100%;
-}
-.slider__tkxy0:global(.__wab_instance) {
-  width: 100%;
-  max-width: 100%;
-  flex-direction: column;
-  object-fit: cover;
-  position: absolute;
-  justify-content: center;
-  left: 0px;
-  top: 0px;
-  min-width: 0;
-  display: none;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .slider__tkxy0:global(.__wab_instance) {
-    height: 100%;
-    min-height: 0;
-    display: none;
-  }
-}
-.link__okU36 {
-  position: relative;
   display: flex;
-  color: var(--token-Upjowq-BeelUUS);
-  align-items: center;
-  justify-content: center;
-  flex-grow: 0;
-  padding-left: 11px;
-}
-.industryCard__bs8Ry:global(.__wab_instance) {
-  max-width: 100%;
-}
-.link__jaMn {
-  position: relative;
-  display: flex;
-  color: var(--token-Upjowq-BeelUUS);
-  padding-left: 11px;
-}
-.industryCard__qrLfI:global(.__wab_instance) {
-  max-width: 100%;
-}
-.link__uMR {
-  position: relative;
-  display: flex;
-  color: var(--token-Upjowq-BeelUUS);
-  padding-left: 11px;
-}
-.industryCard__psQ0:global(.__wab_instance) {
-  max-width: 100%;
-}
-.link__yoIDl {
-  position: relative;
-  display: flex;
-  color: var(--token-Upjowq-BeelUUS);
-  padding-left: 11px;
-}
-.industryCard__cXcFp:global(.__wab_instance) {
-  max-width: 100%;
-}
-.link__rLcen {
-  position: relative;
-  display: flex;
-  color: var(--token-Upjowq-BeelUUS);
-  justify-content: center;
-  padding-left: 11px;
-}
-.industryCard__kH9Ly:global(.__wab_instance) {
-  max-width: 100%;
 }
 .freeBox__flydq {
   display: flex;
@@ -3642,7 +3576,7 @@
     max-width: 55%;
   }
 }
-.slider__rBg8W:global(.__wab_instance) {
+.slider:global(.__wab_instance) {
   width: 100%;
   max-width: 100%;
   flex-direction: column;
@@ -3653,7 +3587,7 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 767px) {
-  .slider__rBg8W:global(.__wab_instance) {
+  .slider:global(.__wab_instance) {
     height: 100%;
     min-height: 0;
   }
