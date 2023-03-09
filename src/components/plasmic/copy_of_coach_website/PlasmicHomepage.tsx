@@ -208,10 +208,6 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames("__wab_instance", sty.reusableHeader)}
           />
 
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__sIloo)} />
-          ) : null}
-
           <p.Stack
             as={"div"}
             data-plasmic-name={"section1"}

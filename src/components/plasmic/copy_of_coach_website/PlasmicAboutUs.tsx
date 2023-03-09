@@ -157,8 +157,6 @@ function PlasmicAboutUs__RenderFunc(props: {
             sty.root2
           )}
         >
-          <div className={classNames(projectcss.all, sty.freeBox__x0EtK)} />
-
           <ReusableHeader
             data-plasmic-name={"reusableHeader"}
             data-plasmic-override={overrides.reusableHeader}

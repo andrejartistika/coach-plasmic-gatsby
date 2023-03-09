@@ -147,8 +147,6 @@ function PlasmicIndustryLuxuryGoods__RenderFunc(props: {
             sty.root
           )}
         >
-          <div className={classNames(projectcss.all, sty.freeBox___42Ac8)} />
-
           <ReusableHeader
             data-plasmic-name={"reusableHeader"}
             data-plasmic-override={overrides.reusableHeader}

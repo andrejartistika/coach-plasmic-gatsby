@@ -16,66 +16,74 @@ export function Header({ isDark, data }) {
   }
 
   return (
-    <div>
+    <div className="header">
       <div className={isDark ? 'header--wrapper dark' : 'header--wrapper'}>
-        <img
-          className="header--logo"
-          src={isDark ? LogoDarkMode : Logo}
-          onClick={() => {
-            navigate('/');
-            document.body.style.overflow = 'scroll';
-            setShowMenu(false);
-          }}
-        />
+        <div className="header-container">
+          <div className="header-with-items">
+            <img
+              className="header--logo"
+              src={isDark ? LogoDarkMode : Logo}
+              onClick={() => {
+                navigate('/');
+                document.body.style.overflow = 'scroll';
+                setShowMenu(false);
+              }}
+            />
 
-        <div className="header--menu-list">
-          {data?.map((el) => {
-            return (
-              <React.Fragment key={el.itemTitle}>
-                <MenuItem
-                  text={el.itemTitle}
-                  items={el.subMenuItems}
-                  link={el.link}
-                  isDark={isDark}
-                />
-              </React.Fragment>
-            );
-          })}
+            <div className="header--menu-list">
+              {data?.map((el) => {
+                return (
+                  <React.Fragment key={el.itemTitle}>
+                    <MenuItem
+                      text={el.itemTitle}
+                      items={el.subMenuItems}
+                      link={el.link}
+                      isDark={isDark}
+                    />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+          </div>
+
+          <div
+            className={
+              showMenu
+                ? 'header--full-menu-container-visible'
+                : 'header--full-menu-container'
+            }
+          >
+            {showMenu &&
+              data?.map((el, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <ResponsiveMenuItem
+                      menuItem={el}
+                      setShowMenu={setShowMenu}
+                    />
+                  </React.Fragment>
+                );
+              })}
+          </div>
         </div>
-        <a
-          style={{ textDecoration: 'none' }}
-          className={
-            isDark ? 'header--action-button dark' : 'header--action-button'
-          }
-          href="https://calendly.com/kalina-t/30min"
-          target="_blank"
-        >
-          GET STARTED
-        </a>
-        <img
-          className={'header--menu-icon'}
-          src={BurgerMenu}
-          onClick={() => toggleMenu()}
-          height={20}
-          width={20}
-        />
-      </div>
-
-      <div
-        className={
-          showMenu
-            ? 'header--full-menu-container-visible'
-            : 'header--full-menu-container'
-        }
-      >
-        {showMenu &&
-          data?.map((el, index) => {
-            return (
-              <React.Fragment key={index}>
-                <ResponsiveMenuItem menuItem={el} setShowMenu={setShowMenu} />
-              </React.Fragment>
-            );
-          })}
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+          <a
+            className={
+              isDark ? 'header--action-button dark' : 'header--action-button'
+            }
+            href="https://calendly.com/kalina-t/30min"
+            target="_blank"
+          >
+            GET STARTED
+          </a>
+          <img
+            className={'header--menu-icon'}
+            src={BurgerMenu}
+            onClick={() => toggleMenu()}
+            height={20}
+            width={20}
+          />
+        </div>
       </div>
     </div>
   );

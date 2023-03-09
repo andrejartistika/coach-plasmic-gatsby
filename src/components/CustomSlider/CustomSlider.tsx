@@ -1,15 +1,16 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 // import './CustomSlider.css';
 export default function CustomSlider({ children, ...props }) {
-  const [dragging, setDragging] = useState(false);
+  const dragging = useRef(false);
 
   const handleOnItemClick = useCallback(
     (e) => {
-      if (dragging) {
+      console.log(dragging.current);
+      if (dragging.current) {
         e.stopPropagation();
         e.preventDefault();
-        setDragging(false);
+        dragging.current = false;
         var anchorTags = document.getElementsByTagName('a');
         var anchorsList = Array.prototype.slice.call(anchorTags);
         anchorsList.forEach((el) => {
@@ -20,27 +21,27 @@ export default function CustomSlider({ children, ...props }) {
     [dragging]
   );
 
-  const handleSwiped = useCallback(() => {
-    setDragging(true);
-  }, [setDragging]);
-
-  useEffect(() => {
-    var anchorTags = document.getElementsByTagName('a');
-    var anchorsList = Array.prototype.slice.call(anchorTags);
-    anchorsList.forEach((el) => {
-      el.style.pointerEvents = 'none';
-    });
-  }, [dragging]);
-
   return (
     <Slider
       swipeEvent={(event) => {
-        setDragging(true);
+        dragging.current = true;
+        console.log('dragging tru');
+        var anchorTags = document.getElementsByTagName('a');
+        var anchorsList = Array.prototype.slice.call(anchorTags);
+        anchorsList.forEach((el) => {
+          el.style.pointerEvents = 'none';
+        });
       }}
       afterChange={() => {
-        setDragging(false);
+        dragging.current = false;
+        console.log('draggin fals');
+
+        var anchorTags = document.getElementsByTagName('a');
+        var anchorsList = Array.prototype.slice.call(anchorTags);
+        anchorsList.forEach((el) => {
+          el.style.pointerEvents = 'auto';
+        });
       }}
-      onSwipe={handleSwiped}
       {...props}
     >
       {React.Children.map(children, (child) => (

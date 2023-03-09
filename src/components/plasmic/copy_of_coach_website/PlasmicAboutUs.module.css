@@ -23,19 +23,6 @@
 .root2 > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-top: 0px;
 }
-.freeBox__x0EtK {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: 80px;
-  max-width: 100%;
-  min-width: 0;
-  flex-shrink: 0;
-  padding: 8px;
-}
 .reusableHeader:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
   height: 80px;
