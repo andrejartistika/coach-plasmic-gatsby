@@ -538,6 +538,19 @@
           "cssFilePath": "plasmic/copy_of_coach_website/PlasmicAboutUs.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "DNn9rEuqOu",
+          "name": "PrimaryCtaButton",
+          "type": "managed",
+          "projectId": "n7JM2c9rKsJq2MtgHpQAyH",
+          "renderModuleFilePath": "plasmic/coach_website_gatsby/PlasmicPrimaryCtaButton.tsx",
+          "importSpec": {
+            "modulePath": "PrimaryCtaButton.tsx"
+          },
+          "cssFilePath": "plasmic/coach_website_gatsby/PlasmicPrimaryCtaButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -19,7 +19,7 @@ import {
 } from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import {
   hasVariant,
@@ -38,6 +38,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import ReusableHeader from "../../ReusableHeader"; // plasmic-import: aZG1o9ts_1BbAO/component
+import PrimaryCtaButton from "../../PrimaryCtaButton"; // plasmic-import: DNn9rEuqOu/component
 import Button from "../../Button"; // plasmic-import: HFQysdji1yD9Yg/component
 import { ShowcaseComponentMobile } from "components/Showcase/ShowcaseComponentMobile"; // plasmic-import: rWm0V-GKKDqfP_/codeComponent
 import { ShowcaseComponent } from "components/Showcase/ShowcaseComponent"; // plasmic-import: 3rNeoH1I_fqFT8/codeComponent
@@ -56,7 +57,6 @@ import CorrectsvgIcon from "./icons/PlasmicIcon__Correctsvg"; // plasmic-import:
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: ygnpRbGipc6tPF/icon
 import DownArrowIcon from "./icons/PlasmicIcon__DownArrow"; // plasmic-import: 21ZYLfZ9UXFykz/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: Eg0Wi1P4Mcw9OO/icon
-import buttonCaretWhitesvg2EkMgwDrEmqPnVl from "./images/buttonCaretWhitesvg2.svg"; // plasmic-import: ekMgwDrEmqPnVl/picture
 import bannerimg2PngYmglJ9DdJ from "../coach_website_gatsby/images/bannerimg2Png.png"; // plasmic-import: ymglJ9DdJ/picture
 import group58PngMvc2RMleKXbTz from "./images/group58Png.png"; // plasmic-import: MVC2rMleKXbTZ-/picture
 import group937SvgOzNkuZf699WA2 from "./images/group937Svg.svg"; // plasmic-import: OZNkuZf699w-A2/picture
@@ -78,6 +78,7 @@ import coachSeossvgAPamuRzFsd5YO from "./images/coachSeossvg.svg"; // plasmic-im
 import coachIdssvg2KI349Tcn0QAmz from "./images/coachIdssvg.svg"; // plasmic-import: 2kI349Tcn0qAMZ/picture
 import coachEmployeessvgHgVkWna4YYjwz from "./images/coachEmployeessvg.svg"; // plasmic-import: hgVkWna4Y_yjwz/picture
 import _287StartupFlatlinesvg1Ven9D9JoBomE from "./images/_287StartupFlatlinesvg.svg"; // plasmic-import: 1VEN9-D9JoBomE/picture
+import buttonCaretWhitesvg2EkMgwDrEmqPnVl from "./images/buttonCaretWhitesvg2.svg"; // plasmic-import: ekMgwDrEmqPnVl/picture
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -97,6 +98,7 @@ export type PlasmicHomepage__OverridesType = {
   reusableHeader?: p.Flex<typeof ReusableHeader>;
   section1?: p.Flex<"div">;
   copy?: p.Flex<"div">;
+  primaryCtaButton?: p.Flex<typeof PrimaryCtaButton>;
   ctaBlog2?: p.Flex<"div">;
   section12?: p.Flex<"div">;
   section11?: p.Flex<"div">;
@@ -282,47 +284,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         </div>
                       </p.Stack>
 
-                      <p.Stack
-                        as={p.PlasmicLink}
-                        hasGap={true}
+                      <PrimaryCtaButton
+                        data-plasmic-name={"primaryCtaButton"}
+                        data-plasmic-override={overrides.primaryCtaButton}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__llVoB
+                          "__wab_instance",
+                          sty.primaryCtaButton
                         )}
-                        component={Link}
-                        href={"https://calendly.com/kalina-t/30min" as const}
-                        platform={"gatsby"}
-                        target={"_blank" as const}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__lsOlE
-                          )}
-                        >
-                          {"GET STARTED"}
-                        </div>
-
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__ifg4J)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"15px" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: buttonCaretWhitesvg2EkMgwDrEmqPnVl,
-                            fullWidth: 108,
-                            fullHeight: 150,
-                            aspectRatio: 0.722222
-                          }}
-                        />
-                      </p.Stack>
+                      />
                     </p.Stack>
                   </p.Stack>
                 </div>
@@ -1501,7 +1470,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       "__wab_instance",
                       sty.showcaseComponentMobile
                     )}
-                    isLight={true}
+                    isLight={false}
                   />
                 ) : null}
 
@@ -2613,6 +2582,7 @@ const PlasmicDescendants = {
     "reusableHeader",
     "section1",
     "copy",
+    "primaryCtaButton",
     "ctaBlog2",
     "section12",
     "section11",
@@ -2635,8 +2605,9 @@ const PlasmicDescendants = {
     "footer"
   ],
   reusableHeader: ["reusableHeader"],
-  section1: ["section1", "copy"],
-  copy: ["copy"],
+  section1: ["section1", "copy", "primaryCtaButton"],
+  copy: ["copy", "primaryCtaButton"],
+  primaryCtaButton: ["primaryCtaButton"],
   ctaBlog2: ["ctaBlog2", "section12", "section11"],
   section12: ["section12"],
   section11: ["section11"],
@@ -2674,6 +2645,7 @@ type NodeDefaultElementType = {
   reusableHeader: typeof ReusableHeader;
   section1: "div";
   copy: "div";
+  primaryCtaButton: typeof PrimaryCtaButton;
   ctaBlog2: "div";
   section12: "div";
   section11: "div";
@@ -2760,6 +2732,7 @@ export const PlasmicHomepage = Object.assign(
     reusableHeader: makeNodeComponent("reusableHeader"),
     section1: makeNodeComponent("section1"),
     copy: makeNodeComponent("copy"),
+    primaryCtaButton: makeNodeComponent("primaryCtaButton"),
     ctaBlog2: makeNodeComponent("ctaBlog2"),
     section12: makeNodeComponent("section12"),
     section11: makeNodeComponent("section11"),

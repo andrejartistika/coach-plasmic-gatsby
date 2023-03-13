@@ -31,11 +31,13 @@ h5 {
 }
 
 .showcase--items-mobile {
-  width: 80vw;
-  justify-items: center;
+
   display: flex;
+  /* align-self: center;
+   */
+   justify-self: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0;
 }
 
@@ -58,6 +60,7 @@ h5 {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -89,6 +92,8 @@ h5 {
   overflow: hidden;
   cursor: pointer;
   transition: height 0.5s;
+  justify-content: center;
+  align-items: center;
 }
 
 .showcase--item-light.selected {
@@ -129,9 +134,7 @@ h5 {
 .showcase--item-title {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  padding-left: 10px;
+
 }
 
 .showcase--item .showcase--item-title {
@@ -160,6 +163,23 @@ h5 {
 .showcase--item-content-minimized {
   text-align: start;
   color: #11253e;
-  width: 90%;
-  padding: 10px 40px;
+}
+
+
+
+.showcase--item-content-minimized-title, .showcase--item-content-minimized-desc{
+  /* text-align: center; */
+  color: white;
+}
+
+.showcase--item-content-minimized-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+
+}
+
+.showcase--item-content-minimized-desc {
+  padding-bottom: 40px;
+  font-size: 17px;
 }

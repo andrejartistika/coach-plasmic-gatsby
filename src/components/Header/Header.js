@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import MenuItem from './MenuItem';
 import Logo from 'assets/icons/coach-logo.svg';
 import LogoDarkMode from 'assets/icons/coach-logo-dark-mode.svg';
-import BurgerMenu from 'assets/icons/menu-burger.svg';
+import BurgerMenu from 'assets/icons/icon-mobilemenu-hamburger.svg';
+import CloseMenu from 'assets/icons/icon-mobilemenu-close.svg';
+
 import { navigate } from 'gatsby';
 import './Header.css';
 import ResponsiveMenuItem from './ResponsiveMenuItem';
+import * as p from '@plasmicapp/react-web';
+import { classNames } from '@plasmicapp/react-web';
+import buttonCaretWhitesvg from 'components/plasmic/copy_of_coach_website/images/buttonCaretWhitesvg2.svg'; // plasmic-import: ekMgwDrEmqPnVl/picture
 
 export function Header({ isDark, data }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -53,17 +58,40 @@ export function Header({ isDark, data }) {
                 : 'header--full-menu-container'
             }
           >
-            {showMenu &&
-              data?.map((el, index) => {
-                return (
-                  <React.Fragment key={index}>
-                    <ResponsiveMenuItem
-                      menuItem={el}
-                      setShowMenu={setShowMenu}
-                    />
-                  </React.Fragment>
-                );
-              })}
+            <div className="header-responsive-menu-items-container">
+              {showMenu &&
+                data?.map((el, index) => {
+                  return (
+                    <React.Fragment key={index}>
+                      <ResponsiveMenuItem
+                        menuItem={el}
+                        setShowMenu={setShowMenu}
+                      />
+                    </React.Fragment>
+                  );
+                })}
+            </div>
+            <div
+              className="header-menu-container-buttons"
+              style={{ display: showMenu ? 'flex' : 'none' }}
+            >
+              <a
+                className={
+                  isDark
+                    ? 'header--action-button-mobile dark'
+                    : 'header--action-button-mobile'
+                }
+                href="https://calendly.com/kalina-t/30min"
+                target="_blank"
+              >
+                GET STARTED
+                <img
+                  src={buttonCaretWhitesvg}
+                  alt="next arrow"
+                  style={{ width: 15, height: 15, marginLeft: 5 }}
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
@@ -76,12 +104,13 @@ export function Header({ isDark, data }) {
           >
             GET STARTED
           </a>
+
           <img
             className={'header--menu-icon'}
-            src={BurgerMenu}
+            src={showMenu ? CloseMenu : BurgerMenu}
             onClick={() => toggleMenu()}
-            height={20}
-            width={20}
+            height={30}
+            width={30}
           />
         </div>
       </div>

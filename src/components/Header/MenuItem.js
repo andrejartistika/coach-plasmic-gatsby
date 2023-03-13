@@ -23,22 +23,34 @@ export default function MenuItem({ text, items, link, isDark }) {
   }, [showItems]);
 
   return (
-    <div ref={ref} className="header--menu-item">
+    <div
+      ref={ref}
+      className="header--menu-item"
+      onClick={() => {
+        if (items) {
+          setShowItems((prevState) => !prevState);
+        } else if (link) {
+          setShowItems(false);
+          navigate(link);
+        }
+      }}
+    >
       <div
         className={
           isDark ? 'header--menu-item-text dark' : 'header--menu-item-text'
         }
-        onClick={() => {
-          if (items) {
-            setShowItems((prevState) => !prevState);
-          } else if (link) {
-            setShowItems(false);
-            navigate(link);
-          }
-        }}
       >
         {text}
-        {items && <img src={isDark ? DownCaretGray : DownCaret} />}
+        {items && (
+          <img
+            src={isDark ? DownCaretGray : DownCaret}
+            alt="icon for menu item"
+            style={{
+              transform: showItems ? 'rotateX(-180deg)' : 'rotateX(0deg)',
+              transition: 'all 300ms',
+            }}
+          />
+        )}
       </div>
       {showItems && items && (
         <div

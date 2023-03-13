@@ -19,7 +19,7 @@ import {
 } from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import * as pp from "@plasmicapp/react-web";
 import {
@@ -229,8 +229,12 @@ function PlasmicButton__RenderFunc(props: {
     useTrigger("useFocusVisibleWithin", {
       isTextInput: false
     });
+  const [isRootHover, triggerRootHoverProps] = useTrigger("useHover", {});
+  const [isRootActive, triggerRootActiveProps] = useTrigger("usePressed", {});
   const triggers = {
-    focusVisibleWithin_root: isRootFocusVisibleWithin
+    focusVisibleWithin_root: isRootFocusVisibleWithin,
+    hover_root: isRootHover,
+    active_root: isRootActive
   };
 
   return (
@@ -307,7 +311,11 @@ function PlasmicButton__RenderFunc(props: {
           [sty.rootsize_minimal]: hasVariant($state, "size", "minimal")
         }
       )}
-      data-plasmic-trigger-props={[triggerRootFocusVisibleWithinProps]}
+      data-plasmic-trigger-props={[
+        triggerRootFocusVisibleWithinProps,
+        triggerRootHoverProps,
+        triggerRootActiveProps
+      ]}
     >
       {(hasVariant($state, "showStartIcon", "showStartIcon") ? true : false) ? (
         <div
@@ -422,107 +430,109 @@ function PlasmicButton__RenderFunc(props: {
           )
         })}
       >
-        {p.renderPlasmicSlot({
-          defaultContents: "Button",
-          value: args.children,
-          className: classNames(sty.slotTargetChildren, {
-            [sty.slotTargetChildren___focusVisibleWithin]:
-              triggers.focusVisibleWithin_root,
-            [sty.slotTargetChildrencolor_blue]: hasVariant(
-              $state,
-              "color",
-              "blue"
-            ),
-            [sty.slotTargetChildrencolor_clear]: hasVariant(
-              $state,
-              "color",
-              "clear"
-            ),
-            [sty.slotTargetChildrencolor_green]: hasVariant(
-              $state,
-              "color",
-              "green"
-            ),
-            [sty.slotTargetChildrencolor_link]: hasVariant(
-              $state,
-              "color",
-              "link"
-            ),
-            [sty.slotTargetChildrencolor_link_size_minimal]:
-              hasVariant($state, "color", "link") &&
-              hasVariant($state, "size", "minimal"),
-            [sty.slotTargetChildrencolor_red]: hasVariant(
-              $state,
-              "color",
-              "red"
-            ),
-            [sty.slotTargetChildrencolor_sand]: hasVariant(
-              $state,
-              "color",
-              "sand"
-            ),
-            [sty.slotTargetChildrencolor_softBlue]: hasVariant(
-              $state,
-              "color",
-              "softBlue"
-            ),
-            [sty.slotTargetChildrencolor_softGreen]: hasVariant(
-              $state,
-              "color",
-              "softGreen"
-            ),
-            [sty.slotTargetChildrencolor_softRed]: hasVariant(
-              $state,
-              "color",
-              "softRed"
-            ),
-            [sty.slotTargetChildrencolor_softSand]: hasVariant(
-              $state,
-              "color",
-              "softSand"
-            ),
-            [sty.slotTargetChildrencolor_softYellow]: hasVariant(
-              $state,
-              "color",
-              "softYellow"
-            ),
-            [sty.slotTargetChildrencolor_white]: hasVariant(
-              $state,
-              "color",
-              "white"
-            ),
-            [sty.slotTargetChildrencolor_yellow]: hasVariant(
-              $state,
-              "color",
-              "yellow"
-            ),
-            [sty.slotTargetChildrenisDisabled]: hasVariant(
-              $state,
-              "isDisabled",
-              "isDisabled"
-            ),
-            [sty.slotTargetChildrenshape_rounded]: hasVariant(
-              $state,
-              "shape",
-              "rounded"
-            ),
-            [sty.slotTargetChildrenshowEndIcon]: hasVariant(
-              $state,
-              "showEndIcon",
-              "showEndIcon"
-            ),
-            [sty.slotTargetChildrenshowStartIcon]: hasVariant(
-              $state,
-              "showStartIcon",
-              "showStartIcon"
-            ),
-            [sty.slotTargetChildrensize_minimal]: hasVariant(
-              $state,
-              "size",
-              "minimal"
-            )
-          })
-        })}
+        {(triggers.active_root ? true : triggers.hover_root ? true : true)
+          ? p.renderPlasmicSlot({
+              defaultContents: "Button",
+              value: args.children,
+              className: classNames(sty.slotTargetChildren, {
+                [sty.slotTargetChildren___focusVisibleWithin]:
+                  triggers.focusVisibleWithin_root,
+                [sty.slotTargetChildrencolor_blue]: hasVariant(
+                  $state,
+                  "color",
+                  "blue"
+                ),
+                [sty.slotTargetChildrencolor_clear]: hasVariant(
+                  $state,
+                  "color",
+                  "clear"
+                ),
+                [sty.slotTargetChildrencolor_green]: hasVariant(
+                  $state,
+                  "color",
+                  "green"
+                ),
+                [sty.slotTargetChildrencolor_link]: hasVariant(
+                  $state,
+                  "color",
+                  "link"
+                ),
+                [sty.slotTargetChildrencolor_link_size_minimal]:
+                  hasVariant($state, "color", "link") &&
+                  hasVariant($state, "size", "minimal"),
+                [sty.slotTargetChildrencolor_red]: hasVariant(
+                  $state,
+                  "color",
+                  "red"
+                ),
+                [sty.slotTargetChildrencolor_sand]: hasVariant(
+                  $state,
+                  "color",
+                  "sand"
+                ),
+                [sty.slotTargetChildrencolor_softBlue]: hasVariant(
+                  $state,
+                  "color",
+                  "softBlue"
+                ),
+                [sty.slotTargetChildrencolor_softGreen]: hasVariant(
+                  $state,
+                  "color",
+                  "softGreen"
+                ),
+                [sty.slotTargetChildrencolor_softRed]: hasVariant(
+                  $state,
+                  "color",
+                  "softRed"
+                ),
+                [sty.slotTargetChildrencolor_softSand]: hasVariant(
+                  $state,
+                  "color",
+                  "softSand"
+                ),
+                [sty.slotTargetChildrencolor_softYellow]: hasVariant(
+                  $state,
+                  "color",
+                  "softYellow"
+                ),
+                [sty.slotTargetChildrencolor_white]: hasVariant(
+                  $state,
+                  "color",
+                  "white"
+                ),
+                [sty.slotTargetChildrencolor_yellow]: hasVariant(
+                  $state,
+                  "color",
+                  "yellow"
+                ),
+                [sty.slotTargetChildrenisDisabled]: hasVariant(
+                  $state,
+                  "isDisabled",
+                  "isDisabled"
+                ),
+                [sty.slotTargetChildrenshape_rounded]: hasVariant(
+                  $state,
+                  "shape",
+                  "rounded"
+                ),
+                [sty.slotTargetChildrenshowEndIcon]: hasVariant(
+                  $state,
+                  "showEndIcon",
+                  "showEndIcon"
+                ),
+                [sty.slotTargetChildrenshowStartIcon]: hasVariant(
+                  $state,
+                  "showStartIcon",
+                  "showStartIcon"
+                ),
+                [sty.slotTargetChildrensize_minimal]: hasVariant(
+                  $state,
+                  "size",
+                  "minimal"
+                )
+              })
+            })
+          : null}
       </div>
 
       {(hasVariant($state, "showEndIcon", "showEndIcon") ? true : false) ? (

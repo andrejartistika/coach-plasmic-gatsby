@@ -16,7 +16,6 @@ export default function ResponsiveMenuItem({ menuItem, setShowMenu }) {
       onClick={() => {
         setShowItems((prevData) => !prevData);
       }}
-      style={{ cursor: 'pointer' }}
     >
       <div className="header--responsive-menu-item ">
         {menuItem.link && (

@@ -1,5 +1,4 @@
-import React from "react";
-import "../ShowcaseComponent.css";
+import React from 'react';
 
 export function ShowcaseItemMinimized({
   itemIndex,
@@ -16,9 +15,9 @@ export function ShowcaseItemMinimized({
       <div
         className={`${
           isLight
-            ? "showcase--item-light-minimized"
-            : "showcase--item-minimized"
-        } ${index == itemIndex ? "selected" : ""}`}
+            ? 'showcase--item-light-minimized'
+            : 'showcase--item-minimized'
+        } ${index == itemIndex ? 'selected' : ''}`}
         onClick={onClick}
       >
         <div className="showcase--item-title">

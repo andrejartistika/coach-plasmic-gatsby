@@ -19,7 +19,7 @@ import {
 } from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import * as pp from "@plasmicapp/react-web";
 import {
@@ -624,6 +624,30 @@ function useBehavior<P extends pp.BaseSelectProps>(
   props: P,
   ref: pp.SelectRef
 ) {
+  if (!("options" in props)) {
+    if (!("children" in props)) {
+      props = {
+        ...props,
+        children: (
+          <React.Fragment>
+            <Select__Option
+              className={classNames("__wab_instance", sty.option__v2SzT)}
+              value={"value1" as const}
+            >
+              {"Option 1"}
+            </Select__Option>
+
+            <Select__Option
+              className={classNames("__wab_instance", sty.option__mfGaQ)}
+              value={"value2" as const}
+            >
+              {"Option 2"}
+            </Select__Option>
+          </React.Fragment>
+        )
+      };
+    }
+  }
   return pp.useSelect(
     PlasmicSelect,
     props,

@@ -304,6 +304,36 @@
 .root:hover .slotTargetChildren {
   color: #ffffff;
 }
+.root:hover .slotTargetChildren > *,
+.root:hover .slotTargetChildren > :global(.__wab_slot) > *,
+.root:hover
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.root:hover
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.root:hover .slotTargetChildren > picture > img,
+.root:hover .slotTargetChildren > :global(.__wab_slot) > picture > img,
+.root:hover
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img,
+.root:hover
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  opacity: 1;
+}
 .rootcolor_link:hover .slotTargetChildrencolor_link {
   color: #0081f1;
 }
@@ -409,6 +439,36 @@
 }
 .root:active .slotTargetChildren {
   color: #ffffff;
+}
+.root:active .slotTargetChildren > *,
+.root:active .slotTargetChildren > :global(.__wab_slot) > *,
+.root:active
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.root:active
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.root:active .slotTargetChildren > picture > img,
+.root:active .slotTargetChildren > :global(.__wab_slot) > picture > img,
+.root:active
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img,
+.root:active
+  .slotTargetChildren
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  opacity: 1;
 }
 .rootcolor_link:active .slotTargetChildrencolor_link {
   color: #006adc;

@@ -19,7 +19,7 @@ import {
 } from "gatsby";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import {
   hasVariant,
@@ -372,6 +372,7 @@ function PlasmicFeatures__RenderFunc(props: {
                         "__wab_instance",
                         sty.showcaseComponentMobile
                       )}
+                      isLight={true}
                     />
                   </div>
                 ) : null}
