@@ -47,7 +47,7 @@ export default function VideoMinimized({
       {isWeb && <div className={'video-container-border'}></div>}
       {!isWeb && (
         <img
-          src={isLight ? PhoneMockup : PhoneMockupDark}
+          src={isLight ? PhoneMockupDark : PhoneMockup}
           className="phone-mockup"
           height={400}
         />
