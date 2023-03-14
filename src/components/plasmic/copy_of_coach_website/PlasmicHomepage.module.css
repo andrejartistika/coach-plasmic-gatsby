@@ -2891,7 +2891,7 @@
   align-self: center;
   min-width: 0;
   display: none;
-  padding: 117px 135px 50px;
+  padding: 117px 135px 50px 0px;
 }
 .section10 > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -2914,7 +2914,7 @@
 @media (min-width: 0px) and (max-width: 767px) {
   .section10 {
     display: flex;
-    padding: 60px 30px 30px;
+    padding: 60px 0px 30px;
   }
 }
 @media (min-width: 0px) and (max-width: 767px) {

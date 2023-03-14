@@ -440,6 +440,12 @@
   > img {
   margin-top: 45px;
 }
+@media (min-width: 0px) and (max-width: 767px) {
+  .freeBox___8LcQe {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .freeBox__yOG7 {
   display: flex;
   position: relative;
@@ -540,7 +546,6 @@
   max-width: 100%;
   min-width: 0;
   display: none;
-  padding: 8px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .freeBox__cxTc {

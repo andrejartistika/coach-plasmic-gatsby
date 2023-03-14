@@ -34,11 +34,21 @@ export default function VideoMinimized({
         isWeb ? 'video-container-minimized-web' : 'video-container-minimized'
       }
     >
+      <div className="phone-mockup-blank">
+        <div
+          style={{
+            backgroundColor: 'white',
+            width: '100%',
+            height: '100%',
+          }}
+        ></div>
+      </div>
       <video
+        style={{ zIndex: 0 }}
         src={videoLink}
         muted={true}
         onEnded={onVideoEnd}
-        height={330}
+        height={374}
         className={isWeb ? 'video-container-web-mobile' : 'video-container-app'}
         ref={videoRef}
         autoPlay={true}
@@ -46,11 +56,9 @@ export default function VideoMinimized({
       ></video>
       {isWeb && <div className={'video-container-border'}></div>}
       {!isWeb && (
-        <img
-          src={isLight ? PhoneMockupDark : PhoneMockup}
-          className="phone-mockup"
-          height={400}
-        />
+        <div className="phone-mockup">
+          <img src={isLight ? PhoneMockupDark : PhoneMockup} height={450} />
+        </div>
       )}
     </div>
   );

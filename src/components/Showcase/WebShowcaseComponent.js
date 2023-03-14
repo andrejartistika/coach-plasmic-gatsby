@@ -1,34 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-import "./ShowcaseComponent.css";
-import { ShowcaseItem } from "./ShowcaseItem/ShowcaseItem";
-import Video from "./Video/Video";
+import './ShowcaseComponent.css';
+import { ShowcaseItem } from './ShowcaseItem/ShowcaseItem';
+import Video from './Video/Video';
 
+import AnalyticsIcon from 'assets/icons/web-icon-analytics.svg';
+import AssignIcon from 'assets/icons/web-icon-assign.svg';
+import ContentIcon from 'assets/icons/web-icon-content.svg';
+import FeedbackIcon from 'assets/icons/web-icon-feedback.svg';
+import OrganizeIcon from 'assets/icons/web-icon-organize.svg';
 
-import AnalyticsIcon from "assets/icons/web-icon-analytics.svg";
-import AssignIcon from "assets/icons/web-icon-assign.svg";
-import ContentIcon from "assets/icons/web-icon-content.svg";
-import FeedbackIcon from "assets/icons/web-icon-feedback.svg";
-import OrganizeIcon from "assets/icons/web-icon-organize.svg";
+import AnalyticsSelected from 'assets/icons/web-icon-analytics-selected.svg';
+import AssignSelected from 'assets/icons/web-icon-assign-selected.svg';
+import ContentSelected from 'assets/icons/web-icon-content-selected.svg';
+import FeedbackSelected from 'assets/icons/web-icon-feedback-selected.svg';
+import OrganizeSelected from 'assets/icons/web-icon-organize-selected.svg';
 
-import AnalyticsSelected from "assets/icons/web-icon-analytics-selected.svg";
-import AssignSelected from "assets/icons/web-icon-assign-selected.svg";
-import ContentSelected from "assets/icons/web-icon-content-selected.svg";
-import FeedbackSelected from "assets/icons/web-icon-feedback-selected.svg";
-import OrganizeSelected from "assets/icons/web-icon-organize-selected.svg";
-
-import Analytics from "assets/videos/admin-analytics.mp4";
-import AssignTraining from "assets/videos/admin-assigntraining.mp4";
-import CreateContent from "assets/videos/admin-createcontent.mp4";
-import Feedback from "assets/videos/admin-feedback.mp4";
-import Organize from "assets/videos/admin-organize.mp4";
+import Analytics from 'assets/videos/admin-analytics.mp4';
+import AssignTraining from 'assets/videos/admin-assigntraining.mp4';
+import CreateContent from 'assets/videos/admin-createcontent.mp4';
+import Feedback from 'assets/videos/admin-feedback.mp4';
+import Organize from 'assets/videos/admin-organize.mp4';
 
 export function WebShowcaseComponent({ isLight }) {
   const [index, setIndex] = useState(0);
 
   const [video, setVideo] = useState(0);
   const [delayVideo, setDelayVideo] = useState(0);
-
+  console.log('WebShowcaseComponent');
   useEffect(() => {
     setVideo(0);
   }, [index]);
@@ -43,6 +42,7 @@ export function WebShowcaseComponent({ isLight }) {
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
             onVideoEnd={() => setIndex(1)}
+            deletePhoneMockUp={true}
           ></Video>
         )}
         {index == 1 && (
@@ -53,6 +53,7 @@ export function WebShowcaseComponent({ isLight }) {
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
             onVideoEnd={() => setIndex(2)}
+            deletePhoneMockUp={true}
           ></Video>
         )}
         {index == 2 && (
@@ -63,6 +64,7 @@ export function WebShowcaseComponent({ isLight }) {
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
             onVideoEnd={() => setIndex(3)}
+            deletePhoneMockUp={true}
           ></Video>
         )}
         {index == 3 && (
@@ -73,6 +75,7 @@ export function WebShowcaseComponent({ isLight }) {
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
             onVideoEnd={() => setIndex(4)}
+            deletePhoneMockUp={true}
           ></Video>
         )}
         {index == 4 && (
@@ -82,15 +85,16 @@ export function WebShowcaseComponent({ isLight }) {
             videoLink={Organize}
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
+            deletePhoneMockUp={true}
           ></Video>
         )}
       </div>
       <div className="showcase--items">
         <ShowcaseItem
           itemIndex={0}
-          title={"Get Detailed Analytics"}
+          title={'Get Detailed Analytics'}
           description={
-            "Get a complete overview of your organization’s learning progress and detect knowledge gaps before they hurt performance."
+            'Get a complete overview of your organization’s learning progress and detect knowledge gaps before they hurt performance.'
           }
           icon={AnalyticsIcon}
           iconSelected={AnalyticsSelected}
@@ -103,9 +107,9 @@ export function WebShowcaseComponent({ isLight }) {
 
         <ShowcaseItem
           itemIndex={1}
-          title={"Assign Training"}
+          title={'Assign Training'}
           description={
-            "Add roles to users and assign training based on their role & department. Save time by importing your users in bulk."
+            'Add roles to users and assign training based on their role & department. Save time by importing your users in bulk.'
           }
           icon={AssignIcon}
           iconSelected={AssignSelected}
@@ -118,9 +122,9 @@ export function WebShowcaseComponent({ isLight }) {
 
         <ShowcaseItem
           itemIndex={2}
-          title={"Create Content"}
+          title={'Create Content'}
           description={
-            "Easily create new modules or let our team take care of it. Create as many courses as needed without an additional charge."
+            'Easily create new modules or let our team take care of it. Create as many courses as needed without an additional charge.'
           }
           index={index}
           icon={ContentIcon}
@@ -132,9 +136,9 @@ export function WebShowcaseComponent({ isLight }) {
         />
         <ShowcaseItem
           itemIndex={3}
-          title={"Receive Feedback"}
+          title={'Receive Feedback'}
           description={
-            "Coach makes it easy to give and receive feedback. Get alerts when something is wrong, and make accurate decisions based on user feedback and data."
+            'Coach makes it easy to give and receive feedback. Get alerts when something is wrong, and make accurate decisions based on user feedback and data.'
           }
           index={index}
           icon={FeedbackIcon}
@@ -146,9 +150,9 @@ export function WebShowcaseComponent({ isLight }) {
         />
         <ShowcaseItem
           itemIndex={4}
-          title={"Organize"}
+          title={'Organize'}
           description={
-            "Create an organization chart for your business and get detailed reports on how different units perform."
+            'Create an organization chart for your business and get detailed reports on how different units perform.'
           }
           icon={OrganizeIcon}
           iconSelected={OrganizeSelected}

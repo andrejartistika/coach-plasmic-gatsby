@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import PhoneMockup from '../../../assets/icons/phone-mockup.svg';
 import PhoneMockupDark from '../../../assets/icons/phone-mockup-dark.svg';
@@ -12,8 +12,10 @@ export default function Video({
   onVideoEnd,
   isLight,
   isWeb,
+  deletePhoneMockUp,
 }) {
   const videoRef = useRef();
+  const canceledRef = useRef(false);
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -23,18 +25,44 @@ export default function Video({
 
     while (time < 100) {
       time = time + 1;
-      setVideo((prev) => prev + 1);
-      await sleep((videoRef?.current?.duration * 1000) / 100);
+      if (!canceledRef.current) {
+        setVideo((prev) => prev + 1);
+        await sleep((videoRef?.current?.duration * 1000) / 100);
+      }
     }
   };
 
+  useEffect(() => {
+    canceledRef.current = false;
+    return () => {
+      console.log('canceled');
+      canceledRef.current = true;
+    };
+  }, []);
+
+  console.log(deletePhoneMockUp);
+
   return (
     <div className={`${isWeb ? '' : 'video-container-full'}`}>
+      {!deletePhoneMockUp && (
+        <div
+          className="phone-mockup-blank"
+          style={{ width: 280, height: 470, marginTop: 50 }}
+        >
+          <div
+            style={{
+              backgroundColor: 'white',
+              width: '100%',
+              height: '100%',
+            }}
+          ></div>
+        </div>
+      )}
       <video
         src={videoLink}
         muted={true}
         onEnded={onVideoEnd}
-        height={450}
+        height={460}
         className={isWeb ? 'video-container-web' : ''}
         ref={videoRef}
         autoPlay={true}

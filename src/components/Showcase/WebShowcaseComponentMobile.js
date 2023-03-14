@@ -85,64 +85,76 @@ export function WebShowcaseComponentMobile({ isLight }) {
           ></VideoMinimized>
         )}
       </div>
-      <div className="showcase--items-mobile">
-        <ShowcaseItemMinimized
-          itemIndex={0}
-          icon={ReinforceIcon}
-          iconSelected={ReinforceIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(0)}
-          currentVideoTime={index == 0 ? video : 0}
-          videoDelay={delayVideo}
-        />
+      <div style={{ width: '100%' }}>
+        <div className="showcase--items-mobile">
+          <ShowcaseItemMinimized
+            itemIndex={0}
+            icon={ReinforceIcon}
+            iconSelected={ReinforceIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(0)}
+            currentVideoTime={index == 0 ? video : 0}
+            videoDelay={delayVideo}
+          />
 
-        <ShowcaseItemMinimized
-          itemIndex={1}
-          icon={ImproveIcon}
-          iconSelected={ImproveIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(1)}
-          currentVideoTime={index == 1 ? video : 0}
-          videoDelay={delayVideo}
-        />
+          <ShowcaseItemMinimized
+            itemIndex={1}
+            icon={ImproveIcon}
+            iconSelected={ImproveIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(1)}
+            currentVideoTime={index == 1 ? video : 0}
+            videoDelay={delayVideo}
+          />
 
-        <ShowcaseItemMinimized
-          itemIndex={2}
-          index={index}
-          icon={PlayIcon}
-          isLight={isLight}
-          iconSelected={PlayIconSelected}
-          onClick={() => setIndex(2)}
-          currentVideoTime={index == 2 ? video : 0}
-          videoDelay={delayVideo}
-        />
-        <ShowcaseItemMinimized
-          itemIndex={3}
-          index={index}
-          icon={ImproveIcon}
-          isLight={isLight}
-          iconSelected={ImproveIconSelected}
-          onClick={() => setIndex(3)}
-          currentVideoTime={index == 3 ? video : 0}
-          videoDelay={delayVideo}
-        />
+          <ShowcaseItemMinimized
+            itemIndex={2}
+            index={index}
+            icon={PlayIcon}
+            isLight={isLight}
+            iconSelected={PlayIconSelected}
+            onClick={() => setIndex(2)}
+            currentVideoTime={index == 2 ? video : 0}
+            videoDelay={delayVideo}
+          />
+          <ShowcaseItemMinimized
+            itemIndex={3}
+            index={index}
+            icon={ImproveIcon}
+            isLight={isLight}
+            iconSelected={ImproveIconSelected}
+            onClick={() => setIndex(3)}
+            currentVideoTime={index == 3 ? video : 0}
+            videoDelay={delayVideo}
+          />
 
-        <ShowcaseItemMinimized
-          itemIndex={4}
-          icon={TrackIcon}
-          iconSelected={TrackIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(4)}
-          currentVideoTime={index == 4 ? video : 0}
-          videoDelay={delayVideo}
-        />
+          <ShowcaseItemMinimized
+            itemIndex={4}
+            icon={TrackIcon}
+            iconSelected={TrackIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(4)}
+            currentVideoTime={index == 4 ? video : 0}
+            videoDelay={delayVideo}
+          />
+        </div>
       </div>
       <div className="showcase--item-content-minimized">
-        <h5>{webShowcaseData[index].title}</h5>
-        <p>{webShowcaseData[index].description}</p>
+        <h5
+          className="showcase--item-content-minimized-title"
+          style={{ color: isLight ? '#11253e' : 'white' }}
+        >
+          {webShowcaseData[index].title}
+        </h5>
+        <p
+          className="showcase--item-content-minimized-desc"
+          style={{ color: isLight ? '#11253e' : 'white' }}
+        >
+          {webShowcaseData[index].description}
+        </p>
       </div>
     </div>
   );

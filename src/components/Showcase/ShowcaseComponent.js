@@ -42,88 +42,92 @@ export function ShowcaseComponent({
   }, [index]);
   return (
     <div className="showcase--container">
-      <div className="showcase--items">
-        <ShowcaseItem
-          itemIndex={0}
-          title={'Learn by playing'}
-          description={
-            'Play a variety of interactive games that increase your knowledge in a fun & engaging way.'
-          }
-          icon={PlayIcon}
-          iconSelected={PlayIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(0)}
-          currentVideoTime={index == 0 ? video : 0}
-          videoDelay={delayVideo}
-        />
+      <div>
+        <div className="showcase--items" style={{ minHeight: 450 }}>
+          <ShowcaseItem
+            itemIndex={0}
+            title={'Learn by playing'}
+            description={
+              'Play a variety of interactive games that increase your knowledge in a fun & engaging way.'
+            }
+            icon={PlayIcon}
+            iconSelected={PlayIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(0)}
+            currentVideoTime={index == 0 ? video : 0}
+            videoDelay={delayVideo}
+          />
 
-        <ShowcaseItem
-          itemIndex={1}
-          title={'Track performance'}
-          description={
-            'Get real-time insights, and detect your knowledge gaps before they hurt performance.'
-          }
-          icon={TrackIcon}
-          iconSelected={TrackIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(1)}
-          currentVideoTime={index == 1 ? video : 0}
-          videoDelay={delayVideo}
-        />
+          <ShowcaseItem
+            itemIndex={1}
+            title={'Track performance'}
+            description={
+              'Get real-time insights, and detect your knowledge gaps before they hurt performance.'
+            }
+            icon={TrackIcon}
+            iconSelected={TrackIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(1)}
+            currentVideoTime={index == 1 ? video : 0}
+            videoDelay={delayVideo}
+          />
 
-        <ShowcaseItem
-          itemIndex={2}
-          title={'Personalized experience'}
-          description={
-            'Experience a personalized learning journey each time you train with Coach.'
-          }
-          index={index}
-          icon={ReinforceIcon}
-          isLight={isLight}
-          iconSelected={ReinforceIconSelected}
-          onClick={() => setIndex(2)}
-          currentVideoTime={index == 2 ? video : 0}
-          videoDelay={delayVideo}
-        />
-        <ShowcaseItem
-          itemIndex={3}
-          title={'Improve your knowledge'}
-          description={
-            'Improve your knowledge efficiently with lessons that will fix your knowledge gaps'
-          }
-          index={index}
-          icon={ImproveIcon}
-          isLight={isLight}
-          iconSelected={ImproveIconSelected}
-          onClick={() => setIndex(3)}
-          currentVideoTime={index == 3 ? video : 0}
-          videoDelay={delayVideo}
-        />
-        <ShowcaseItem
-          itemIndex={4}
-          title={'Challenge Yourself'}
-          description={
-            'Get better with each game and earn the #1 spot in your company!Get better with each game and earn the #1 spot in your company!'
-          }
-          icon={RewardsIcon}
-          iconSelected={RewardsIconSelected}
-          index={index}
-          isLight={isLight}
-          onClick={() => setIndex(4)}
-          currentVideoTime={index == 4 ? video : 0}
-          videoDelay={delayVideo}
-        />
-        {showButton && (
-          <div style={{ margin: '20px 10px' }}>
-            <ActionButton
-              title={buttonTitle ?? 'Empty Button'}
-              isDark={!isLight}
-              onClick={() => navigate(`/${onClickNavigateToString}`)}
-            />
-          </div>
-        )}
+          <ShowcaseItem
+            itemIndex={2}
+            title={'Personalized experience'}
+            description={
+              'Experience a personalized learning journey each time you train with Coach.'
+            }
+            index={index}
+            icon={ReinforceIcon}
+            isLight={isLight}
+            iconSelected={ReinforceIconSelected}
+            onClick={() => setIndex(2)}
+            currentVideoTime={index == 2 ? video : 0}
+            videoDelay={delayVideo}
+          />
+          <ShowcaseItem
+            itemIndex={3}
+            title={'Improve your knowledge'}
+            description={
+              'Improve your knowledge efficiently with lessons that will fix your knowledge gaps'
+            }
+            index={index}
+            icon={ImproveIcon}
+            isLight={isLight}
+            iconSelected={ImproveIconSelected}
+            onClick={() => setIndex(3)}
+            currentVideoTime={index == 3 ? video : 0}
+            videoDelay={delayVideo}
+          />
+          <ShowcaseItem
+            itemIndex={4}
+            title={'Challenge Yourself'}
+            description={
+              'Get better with each game and earn the #1 spot in your company!Get better with each game and earn the #1 spot in your company!'
+            }
+            icon={RewardsIcon}
+            iconSelected={RewardsIconSelected}
+            index={index}
+            isLight={isLight}
+            onClick={() => setIndex(4)}
+            currentVideoTime={index == 4 ? video : 0}
+            videoDelay={delayVideo}
+          />
+        </div>
+        <div>
+          {showButton && (
+            <div style={{ margin: '20px 10px' }}>
+              <ActionButton
+                title={buttonTitle ?? 'Empty Button'}
+                isDark={!isLight}
+                onClick={() => navigate(`/${onClickNavigateToString}`)}
+              />
+            </div>
+          )}
+        </div>
       </div>
       <div className="showcase--display">
         {index == 0 && (
@@ -168,6 +172,7 @@ export function ShowcaseComponent({
             videoLink={RewardsVideo}
             setVideo={setVideo}
             setDelayVideo={setDelayVideo}
+            onVideoEnd={() => setIndex(0)}
           ></Video>
         )}
       </div>
